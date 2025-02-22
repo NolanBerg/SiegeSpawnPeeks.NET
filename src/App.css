@@ -125,7 +125,7 @@ h1 {
 
 /* Icon styles */
 .tab svg {
-  margin-right: 8px; /* Add space between the icon and text */
+  margin-right: 11px; /* Add space between the icon and text */
   vertical-align: middle; /* Align the icon vertically with the text */
 }
 
@@ -134,7 +134,6 @@ h1 {
 .github-icon, 
 .user-icon {
   font-size: 36px; /* Adjust the size as needed */
-  margin-right: 8px; /* Add space between the icon and text */
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;;
 }
