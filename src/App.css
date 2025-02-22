@@ -1,4 +1,5 @@
 .App {
+  overflow: hidden;
   width: 100%;
   min-height: 100vh; /* Ensure it takes at least the full viewport height */
   background-color: #282c34; /* Dark background */
@@ -6,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
-  position: relative; /* Needed for absolute positioning of logos */
+  position: relative; /* Needed for absolute positioning of banner3 */
 }
 
 /* Banner styles */
@@ -17,52 +18,73 @@
   width: 100%; /* Full width */
   display: flex;
   align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between left and right sections */
+  justify-content: space-between; /* Space between sections */
   position: sticky; /* Make the banner sticky */
   top: 0; /* Stick to the top */
   z-index: 10; /* Ensure it stays above other content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
-.banner2 {
-  background-color: hsl(0, 0%, 100%); /* Dark gray */
-  width: 100%; /* Full width */
-  height: 1px;
-  display: flex;
-  position: sticky; /* Make the banner sticky */
-  top: 0; /* Stick to the top */
-  z-index: 10; /* Ensure it stays above other content */
-}
 
-/* Left Section: Logos */
+/* Left Section: First Logo */
 .left-section {
   display: flex;
   align-items: center; /* Center logos vertically */
+  justify-content: flex-start; /* Align to the left */
+  flex: 1; /* Take up remaining space */
+}
+
+/* Middle Section: Second Logo */
+.middle-section {
+  display: flex;
+  align-items: center; /* Center logos vertically */
+  justify-content: center; /* Center logos horizontally */
+  flex: 1; /* Take up remaining space */
 }
 
 /* Right Section: Tabs */
 .right-section {
   display: flex;
   gap: 20px; /* Space between tabs */
+  justify-content: flex-end; /* Align to the right */
+  flex: 1; /* Take up remaining space */
 }
 
-/* Tab styles */
-.tab {
-  color: white; /* Text color */
-  font-size: 1.5rem;
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-  margin: 5px;
+/* Banner2: Divider Line */
+.banner2 {
+  background-color: #61dafb;; /* White line */
+  width: 100%; /* Full width */
+  height: 1px; /* Thin line */
+  display: flex;
+  position: sticky; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
 }
 
-.tab:hover {
-  color: #61dafb; /* Change text color on hover */
+.banner3 {
+  background-color: white; /* Fallback color */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: absolute; /* Position absolutely */
+  top: 1px; /* Start below banner2 (1px height) */
+  bottom: 0; /* Extend to the bottom of the page */
+  z-index: 0; /* Ensure it stays below other content */
+  margin: 0;
+  padding: 0;
+  background-image: url('/public/images/background.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed */
+  overflow-y: hidden; /* Disables vertical scrolling */
 }
 
 /* First Logo styles */
 .banner .logo {
   width: 45px; /* Adjust logo size */
-  height: 50px; /* Adjust logo size */
-  margin-left: 13px; /* Add margin to the left of the logo */
+  height: 55px; /* Adjust logo size */
+  margin-left: 10px; /* Add margin to the left of the logo */
   border: 2px solid white; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
 }
@@ -74,54 +96,31 @@
 }
 
 /* Second Logo styles */
-.banner .second-logo {
-  width: 100px; /* Adjust logo size */
-  height: 50px; /* Adjust logo size */
-  margin-left: 40px; /* Move it slightly to the right of the first logo */
-  border: 2px solid white; /* Add a border */
+.second-logo {
+  width: 170px; /* Adjust logo size */
+  height: 70px; /* Adjust logo size */
+  margin: 0 auto; /* Center the logo horizontally */
+  border: 2px solid #61dafb;; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
 }
 
 .banner .second-logo:hover {
-  border-color: #61dafb; /* Change border color on hover */
+  border-color: white; /* Change border color on hover */
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* Title styles */
 h1 {
   margin-top: 40px; /* Add space between banner and title */
   font-size: 4.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white; /* Text color */
   text-shadow: 
-  -0.5px -0.5px 0 #000,  
-   0.5px -0.5px 0 #000,
-  -0.5px  0.5px 0 #000,
-   0.5px  0.5px 0 #000;
-  
-}
-
-/* Logos Container */
-.logos-container {
-  position: absolute; /* Position the container absolutely */
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
-  display: flex;
-  gap: 10px; /* Space between logos */
-}
-
-/* Vite Logo styles */
-.vite-logo, 
-.react-logo {
-  width: 50px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 12px;
-}
-
-.vite-logo:hover,
-.react-logo:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  transition: transform 0.3s ease; /* Smooth transition */
+    -0.5px -0.5px 0 #000,  
+     0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+     0.5px  0.5px 0 #000; /* Black outline */
 }
 
 /* Icon styles */
@@ -134,14 +133,103 @@ h1 {
 .envelope-icon,
 .github-icon, 
 .user-icon {
-  font-size: 32px; /* Adjust the size as needed */
+  font-size: 36px; /* Adjust the size as needed */
   margin-right: 8px; /* Add space between the icon and text */
   vertical-align: middle; /* Align the icon vertically with the text */
+  color: #61dafb;;
 }
 
 /* Hover effect for the icons */
 .tab:hover .envelope-icon,
 .tab:hover .github-icon,
 .tab:hover .user-icon {
-  color: #61dafb; /* Change icon color on hover */
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; 
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of everything */
+}
+
+/* Modal content */
+.modal {
+  background-color: #282c34; /* Dark background */
+  padding: 20px;
+  border: 3px solid white;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  color: white; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Modal button */
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #61dafb; /* Bright blue */
+  border: 2px solid white;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal button:hover {
+  background-color: #4fa8d3; /* Darker blue on hover */
+}
+
+/* Search Bar Container */
+.search-bar-container {
+  margin-top: -400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Take up full width of banner3 */
+}
+
+/* Search Bar Input */
+.search-bar {
+  width: 425px; /* Adjust width as needed */
+  height: 50px;
+  padding: 10px 20px;
+  border: 2px solid #61dafb; /* Border color */
+  border-radius: 25px 0 0 25px; /* Rounded left side */
+  outline: none; /* Remove default outline */
+  font-size: 1rem;
+  color: white;
+  background-color: transparent; /* Transparent background */
+}
+
+.search-bar::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+/* Search Button */
+.search-button {
+  padding: 10px 20px;
+  height: 50px;
+  background-color: #61dafb; /* Button background color */
+  border: 2px solid #61dafb; /* Button border color */
+  border-radius: 0 25px 25px 0; /* Rounded right side */
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.search-button:hover {
+  background-color: #4fa8d3; /* Darker blue on hover */
 }
