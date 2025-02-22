@@ -2,7 +2,7 @@
 
 This is a new attempt at an old project of mine but with a way better ui! Last time I made this project with vanilla js and html/css. This time around I am using Vite and React!
 
-It is a work in progress but the main page is getting there!
+It is a work in progress but the main page is getting there. IF YOU PLAY SIEGE SEND ME YOUR SPAWN PEEK CLIPS @nolanreactdev@gmail.com
 
 # How to use
 
