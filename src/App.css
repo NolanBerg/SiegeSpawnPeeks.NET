@@ -72,7 +72,7 @@
   z-index: 0; /* Ensure it stays below other content */
   margin: 0;
   padding: 0;
-  background-image: url('/public/images/background.jpg'); /* Replace with your image */
+  background-image: url('/images/background.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
