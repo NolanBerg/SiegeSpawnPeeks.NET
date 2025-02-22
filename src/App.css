@@ -1,0 +1,147 @@
+.App {
+  width: 100%;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  background-color: #282c34; /* Dark background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  position: relative; /* Needed for absolute positioning of logos */
+}
+
+/* Banner styles */
+.banner {
+  background-color: hsl(0, 2%, 10%); /* Dark gray */
+  color: #282c34; /* Dark text */
+  padding: 10px 20px; /* Adjust padding */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between left and right sections */
+  position: sticky; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+.banner2 {
+  background-color: hsl(0, 0%, 100%); /* Dark gray */
+  width: 100%; /* Full width */
+  height: 1px;
+  display: flex;
+  position: sticky; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Left Section: Logos */
+.left-section {
+  display: flex;
+  align-items: center; /* Center logos vertically */
+}
+
+/* Right Section: Tabs */
+.right-section {
+  display: flex;
+  gap: 20px; /* Space between tabs */
+}
+
+/* Tab styles */
+.tab {
+  color: white; /* Text color */
+  font-size: 1.5rem;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  margin: 5px;
+}
+
+.tab:hover {
+  color: #61dafb; /* Change text color on hover */
+}
+
+/* First Logo styles */
+.banner .logo {
+  width: 45px; /* Adjust logo size */
+  height: 50px; /* Adjust logo size */
+  margin-left: 13px; /* Add margin to the left of the logo */
+  border: 2px solid white; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.banner .logo:hover {
+  border-color: #61dafb; /* Change border color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Second Logo styles */
+.banner .second-logo {
+  width: 100px; /* Adjust logo size */
+  height: 50px; /* Adjust logo size */
+  margin-left: 43px; /* Move it slightly to the right of the first logo */
+  border: 2px solid white; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.banner .second-logo:hover {
+  border-color: #61dafb; /* Change border color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+h1 {
+  margin-top: 40px; /* Add space between banner and title */
+  font-size: 4.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white; /* Text color */
+  text-shadow: 
+  -0.5px -0.5px 0 #000,  
+   0.5px -0.5px 0 #000,
+  -0.5px  0.5px 0 #000,
+   0.5px  0.5px 0 #000;
+  
+}
+
+/* Logos Container */
+.logos-container {
+  position: absolute; /* Position the container absolutely */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: flex;
+  gap: 10px; /* Space between logos */
+}
+
+/* Vite Logo styles */
+.vite-logo, 
+.react-logo {
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 12px;
+}
+
+.vite-logo:hover,
+.react-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Icon styles */
+.tab svg {
+  margin-right: 8px; /* Add space between the icon and text */
+  vertical-align: middle; /* Align the icon vertically with the text */
+}
+
+/* Envelope and GitHub icon styles */
+.envelope-icon,
+.github-icon, 
+.user-icon {
+  font-size: 32px; /* Adjust the size as needed */
+  margin-right: 8px; /* Add space between the icon and text */
+  vertical-align: middle; /* Align the icon vertically with the text */
+}
+
+/* Hover effect for the icons */
+.tab:hover .envelope-icon,
+.tab:hover .github-icon,
+.tab:hover .user-icon {
+  color: #61dafb; /* Change icon color on hover */
+}
