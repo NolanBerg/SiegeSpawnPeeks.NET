@@ -133,7 +133,7 @@ h1 {
 .envelope-icon,
 .github-icon, 
 .user-icon {
-  font-size: 33px; /* Adjust the size as needed */
+  font-size: 32px; /* Adjust the size as needed */
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;;
 }
