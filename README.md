@@ -1,8 +1,25 @@
-# React + Vite
+# SiegeSpawnPeeks.NET
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a new attempt at an old project of mine but with a way better ui! Last time I made this project with vanilla js and html/css. This time around I am using Vite and React!
 
-Currently, two official plugins are available:
+It is a work in progress but the main page is getting there!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# How to use
+
+# Clone Repository
+```sh 
+git clone https://github.com/NolanBerg/SiegeSpawnPeeks.NET.git
+```
+# Cd directory
+```sh 
+cd SiegeSpawnPeeks.NET
+```
+# Install npm
+```sh 
+npm install
+```
+# Run and copy address into preferred browser!
+```sh 
+npm run dev
+```
+
