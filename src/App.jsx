@@ -28,7 +28,12 @@ function App() {
       <div className="banner">
         {/* Left Side: Logos */}
         <div className="left-section">
-          <img src="/images/logo.jpg" alt="Logo" className="logo" />
+          <a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege" target="_blank" rel="noopener noreferrer">
+            <img src="/images/logo.jpg" alt="logo" className="logo" />
+          </a>
+          <a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/1yyppDElemqVlUXSVif55M" target="_blank" rel="noopener noreferrer">
+            <img src="/images/ad.png" alt="Ad" className="ad" />
+          </a>
         </div>
         {/* Middle Section: Second Logo */}
         <div className="middle-section">
@@ -75,12 +80,12 @@ function App() {
           <div className="modal">
             <h2>About Us</h2>
             <p>
-              Hey my name is Nolan and welcome to my app! This is your one stop shop for:
+              Welcome to SiegeSpawnPeeks.NET! This is site offers:
             </p>
             <ul>
-              <li>Spawn peek tutorials.</li>
-              <li>All ranked maps.</li>
-              <li>Constantly updated.</li>
+              <li>Spawn peek tutorials for all ranked maps.</li>
+              <li>Made for competitive players trying to find new strats.</li>
+              <li>Constantly adding videos. If you have spawn peeks videos click mail icon!</li>
             </ul>
             <button onClick={closeModal}>Close</button>
           </div>
