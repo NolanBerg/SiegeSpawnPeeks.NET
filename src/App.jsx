@@ -119,7 +119,7 @@ function App() {
               <li>Spawn peek tutorials for all ranked maps.</li>
               <li>Made for competitive players trying to find new strats.</li>
               <li>
-                Constantly adding videos. If you have spawn peek videos, click
+                New videos getting uploaded. If you have spawn peek videos, click
                 the mail icon!
               </li>
             </ul>
