@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const maps = [
   "Lair",
@@ -22,9 +22,10 @@ const maps = [
   "Villa",
 ];
 
-const MapDropdown = ({ onSelectMap }) => {
+const MapDropdown = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const filteredMaps = maps
     .filter((map) => map.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -36,7 +37,7 @@ const MapDropdown = ({ onSelectMap }) => {
   };
 
   const handleMapSelect = (map) => {
-    onSelectMap(map);
+    navigate(`/map/${encodeURIComponent(map)}`);
     setIsDropdownOpen(false);
     setSearchTerm("");
   };

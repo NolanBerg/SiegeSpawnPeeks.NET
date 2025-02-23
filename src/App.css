@@ -125,19 +125,22 @@ h1 {
 /* Envelope and GitHub icon styles */
 .envelope-icon,
 .github-icon, 
-.user-icon {
+.user-icon, 
+.home-icon {
   font-size: 34px; /* Adjust the size as needed */
   vertical-align: middle; /* Align the icon vertically with the text */
-  color: #61dafb;;
+  color: #61dafb;
 }
 
 /* Hover effect for the icons */
 .tab:hover .envelope-icon,
 .tab:hover .github-icon,
-.tab:hover .user-icon {
+.tab:hover .user-icon, 
+.tab:hover .home-icon{
   color: white;
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; 
+  cursor: pointer;
 }
 
 /* Modal overlay */
@@ -295,4 +298,17 @@ h1 {
 
 .dropdown-item:hover {
   background-color: rgba(97, 218, 251, 0.1); /* Light blue background on hover */
+}
+
+/* Map Page Styles */
+.map-page {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.map-page h1 {
+  color: #61dafb;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
