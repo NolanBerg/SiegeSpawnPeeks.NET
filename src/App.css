@@ -12,7 +12,7 @@
 
 /* Banner styles */
 .banner {
-  background-color: hsl(0, 2%, 10%); /* Dark gray */
+  background-color: hsl(0, 3%, 7%); /* Dark gray */
   color: #282c34; /* Dark text */
   padding: 10px 20px; /* Adjust padding */
   width: 100%; /* Full width */
@@ -110,8 +110,8 @@
 
 /* Second Logo styles */
 .second-logo {
-  width: 190px; /* Adjust logo size */
-  height: 80px; /* Adjust logo size */
+  width: 180px; /* Adjust logo size */
+  height: 75px; /* Adjust logo size */
   margin: 0 auto; /* Center the logo horizontally */
   border: 2px solid #61dafb;; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
@@ -179,14 +179,14 @@ h1 {
   text-align: center;
   color: white; /* Text color */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a lifted effect */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Modal header */
 .modal h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #61dafb; /* Bright blue for the header */
+  color: white; /* Bright blue for the header */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
@@ -220,10 +220,10 @@ h1 {
 .modal button {
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #61dafb; /* Bright blue */
-  border: 2px solid white;
+  background-color: #61dafb;
   border-radius: 7px;
-  color: white;
+  border: 1px solid black;
+  color: #282c34;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
@@ -243,7 +243,7 @@ h1 {
 
 /* Search Bar Container */
 .search-bar-container {
-  margin-top: -400px;
+  position: relative; /* Add this line */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -262,6 +262,7 @@ h1 {
   color: white;
   background-color: transparent; /* Transparent background */
 }
+
 
 .search-bar::placeholder {
   color: #aaa; /* Placeholder text color */
@@ -284,3 +285,29 @@ h1 {
   background-color: #4fa8d3; /* Darker blue on hover */
 }
 
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 60px; /* Position below the search bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 425px; /* Match search bar width */
+  max-height: 200px; /* Limit height */
+  overflow-y: auto; /* Add scroll if needed */
+  background-color: #282c34; /* Dark background */
+  border: 1px solid #61dafb; /* Bright blue border */
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it appears above other content */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(97, 218, 251, 0.1); /* Light blue background on hover */
+}
