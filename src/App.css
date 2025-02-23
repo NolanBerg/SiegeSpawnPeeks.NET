@@ -241,13 +241,13 @@ h1 {
   transform: translateY(0); /* Reset lift when clicked */
 }
 
-/* Search Bar Container */
 .search-bar-container {
   position: relative; /* Add this line */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%; /* Take up full width of banner3 */
+  margin-top: -300px; /* Move it 200px higher (adjust as needed) */
 }
 
 /* Search Bar Input */
