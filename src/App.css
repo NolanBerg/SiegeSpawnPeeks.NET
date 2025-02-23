@@ -89,29 +89,15 @@
   border-radius: 5px; /* Slightly rounded corners */
 }
 
-/* First Logo styles */
-.banner .ad {
-  width: 55px; /* Adjust logo size */
-  height: 55px; /* Adjust logo size */
-  margin-left: 20px; /* Add margin to the left of the logo */
-  border: 2px solid white; /* Add a border */
-  border-radius: 5px; /* Slightly rounded corners */
-}
-
 .banner .logo:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  transition: transform 0.3s ease; /* Smooth transition */
-}
-
-.banner .ad:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
 /* Second Logo styles */
 .second-logo {
-  width: 180px; /* Adjust logo size */
-  height: 75px; /* Adjust logo size */
+  width: 140px; /* Adjust logo size */
+  height: 65px; /* Adjust logo size */
   margin: 0 auto; /* Center the logo horizontally */
   border: 2px solid #61dafb;; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
@@ -247,7 +233,7 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%; /* Take up full width of banner3 */
-  margin-top: -300px; /* Move it 200px higher (adjust as needed) */
+  margin-top: -375px; /* Move it 200px higher (adjust as needed) */
 }
 
 /* Search Bar Input */
@@ -262,7 +248,6 @@ h1 {
   color: white;
   background-color: transparent; /* Transparent background */
 }
-
 
 .search-bar::placeholder {
   color: #aaa; /* Placeholder text color */

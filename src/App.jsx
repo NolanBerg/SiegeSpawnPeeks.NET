@@ -56,13 +56,6 @@ function App() {
           >
             <img src="/images/logo.jpg" alt="Logo" className="logo" />
           </a>
-          <a
-            href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/1yyppDElemqVlUXSVif55M"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/images/ad.png" alt="Ad" className="ad" />
-          </a>
         </div>
 
         {/* Middle Section: Second Logo */}
