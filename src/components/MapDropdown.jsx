@@ -1,40 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
-const maps = [
-  "Lair",
-  "Nighthaven Labs",
-  "Emerald Plains",
-  "Bank",
-  "Border",
-  "Chalet",
-  "Clubhouse",
-  "Coastline",
-  "Consulate",
-  "Kafe Dostoyevsky",
-  "Kanal",
-  "Oregon",
-  "Outback",
-  "Skyscraper",
-  "Theme Park",
-  "Villa",
-];
+const maps = ["Bank", "Border", "Coastline", "Consulate", "Chalet", "Clubhouse", "Emerald Plains"];
 
 const MapDropdown = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
-  const filteredMaps = maps
-    .filter((map) => map.toLowerCase().includes(searchTerm.toLowerCase()))
-    .sort();
-
-  const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
-    setIsDropdownOpen(true);
-  };
+  const filteredMaps = maps.filter(map => 
+    map.toLowerCase().includes(searchTerm.toLowerCase())
+  ).sort();
 
   const handleMapSelect = (map) => {
     navigate(`/map/${encodeURIComponent(map)}`);
@@ -48,7 +26,7 @@ const MapDropdown = () => {
         setIsDropdownOpen(false);
       }
     };
-
+    
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
@@ -57,10 +35,13 @@ const MapDropdown = () => {
     <div className="search-bar-container">
       <input
         type="text"
-        placeholder="Search for a map..."
+        placeholder="Search maps..."
         className="search-bar"
         value={searchTerm}
-        onChange={handleInputChange}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          setIsDropdownOpen(true);
+        }}
         onFocus={() => setIsDropdownOpen(true)}
       />
       <button className="search-button">
@@ -80,7 +61,7 @@ const MapDropdown = () => {
               </div>
             ))
           ) : (
-            <div className="dropdown-item">No maps found</div>
+            <div className="dropdown-item">No matches found</div>
           )}
         </div>
       )}

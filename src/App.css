@@ -300,15 +300,14 @@ h1 {
   background-color: rgba(97, 218, 251, 0.1); /* Light blue background on hover */
 }
 
-/* Map Page Styles */
 .map-page {
-  padding: 20px;
+  padding: 2rem;
   color: white;
-  text-align: center;
+  background: #282c34;
+  min-height: 100vh;
 }
 
 .map-page h1 {
   color: #61dafb;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
