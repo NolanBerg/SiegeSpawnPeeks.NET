@@ -3,7 +3,24 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const maps = ["Bank", "Border", "Coastline", "Consulate", "Chalet", "Clubhouse", "Emerald Plains"];
+const maps = [
+  "Bank",
+  "Border",
+  "Chalet",
+  "Clubhouse",
+  "Coastline",
+  "Consulate",
+  "Emerald Plains",
+  "Kafe Dostoyevsky",
+  "Kanal",
+  "Lair",
+  "Nighthaven Labs",
+  "Oregon",
+  "Outback",
+  "Skyscraper",
+  "Theme Park",
+  "Villa"
+];
 
 const MapDropdown = () => {
   const [searchTerm, setSearchTerm] = useState("");
