@@ -12,7 +12,7 @@
 
 /* Banner styles */
 .banner {
-  background-color: hsl(0, 3%, 7%); /* Dark gray */
+  background-color: hsl(0, 0%, 10%); /* Dark gray */
   color: #282c34; /* Dark text */
   padding: 10px 20px; /* Adjust padding */
   width: 100%; /* Full width */
@@ -126,7 +126,8 @@ h1 {
 .envelope-icon,
 .github-icon, 
 .user-icon, 
-.home-icon {
+.home-icon,
+.arrow-icon{
   font-size: 34px; /* Adjust the size as needed */
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;
@@ -136,7 +137,7 @@ h1 {
 .tab:hover .envelope-icon,
 .tab:hover .github-icon,
 .tab:hover .user-icon, 
-.tab:hover .home-icon{
+.tab:hover .home-icon {
   color: white;
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; 
@@ -300,24 +301,146 @@ h1 {
   background-color: rgba(97, 218, 251, 0.1); /* Light blue background on hover */
 }
 
-/* Map Page Styles */
+/* Map Page Container */
 .map-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: #282c34;
   color: white;
-  width: 100%;
 }
 
+/* Banner Fix */
+.bannermp {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: hsl(0, 0%, 10%);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* First Logo styles */
+.bannermp .logo {
+  width: 45px; /* Adjust logo size */
+  height: 55px; /* Adjust logo size */
+  margin-left: 10px; /* Add margin to the left of the logo */
+  border: 2px solid white; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.bannermp .logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Banner Fix */
+.banner2mp {
+  height: 1px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #61dafb;
+  
+}
+
+/* Content Area */
 .map-content {
+  flex: 1;
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
 }
 
-.map-content h1 {
-  color: #61dafb;
-  margin-bottom: 20px;
+.back-button {
+  position: absolute;
+  left: 20px; /* Adjust as needed */
+  top: 0; /* Align with the map title */
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff; /* Adjust color as needed */
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+
+.arrow-icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.back-text {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.map-title {
+  text-align: center;
+  color: white;
+  margin-top: 20;
+  font-size: 2.5rem;
+}
+
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.video-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

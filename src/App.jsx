@@ -47,9 +47,6 @@ function App() {
                 </div>
 
                 <div className="right-section">
-                  <span className="tab" onClick={() => navigate("/")}>
-                    <FontAwesomeIcon icon={faHome} className="home-icon" />
-                  </span>
                   <span className="tab" onClick={openModal}>
                     <FontAwesomeIcon icon={faUser} className="user-icon" />
                   </span>
