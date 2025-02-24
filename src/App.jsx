@@ -59,7 +59,7 @@ function App() {
                     </a>
                   </span>
                   <span className="tab">
-                    <a href="https://github.com/NolanBerg" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/NolanBerg/SiegeSpawnPeeks.NET" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faGithub} className="github-icon" />
                     </a>
                   </span>
