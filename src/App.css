@@ -302,7 +302,7 @@ h1 {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  margin-top: 7em;
+  margin-top: 6.5em;
 }
 .back-button {
   position: fixed; /* Changed from absolute to fixed */
