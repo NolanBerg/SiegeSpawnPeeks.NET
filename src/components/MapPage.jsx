@@ -1,74 +1,78 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope, faUser, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Modal from "./Modal.jsx"; // Import the reusable Modal
+
+// Utility function to capitalize each word
+const capitalizeMapName = (name) => {
+  return name
+    .split("-") // Split the string into words
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+    .join(" "); // Join the words back with spaces
+};
 
 const mapContent = {
-  "Bank": [
+  "bank": [
     { id: "QzAPty06Yj0", title: "Alley Spawn Runout" },
   ],
-  "Border": [
+  "border": [
     
   ],
-  "Chalet": [
+  "chalet": [
     { id: "vx63egdPMv8", title: "Hallway Window" },
-    { id: "c14nc9v87_A", title: "Gaming Room Window" }
+    { id: "c14nc9v87_A", title: "Gaming Room Window" },
+    { id: "9A57OzSDFBs", title: "Mezzanine Floor" }
   ],
-  "Clubhouse": [
+  "clubhouse": [
     { id: "yXdrASlSu0I", title: "Gym Window" }
   ],
-  "Coastline": [
+  "coastline": [
     
   ],
-  "Consulate": [
+  "consulate": [
     
   ],
-  "Emerald Plains": [
+  "emerald-plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
     { id: "AfF7PpmC9OI", title: "Memorial Window" },
     { id: "-Q0gedd5Ucs", title: "Golf Course Runout" }
   ],
-  "Kafe Dostoyevsky": [
+  "kafe-dostoyevsky": [
     
   ],
-  "Kanal": [
+  "kanal": [
     { id: "orwvwmDfibI", title: "Museum Door" }
   ],
-  "Lair": [
+  "lair": [
    
   ],
-  "Nighthaven Labs": [
+  "nighthaven-labs": [
     
   ],
-  "Oregon": [
+  "oregon": [
     
   ],
-  "Outback": [
+  "outback": [
     
   ],
-  "Skyscraper": [
+  "skyscraper": [
     
   ],
-  "Theme Park": [
+  "theme-park": [
     { id: "tIncsIkQDLI", title: "Dragon Window" }
    
   ],
-  "Villa": [
+  "villa": [
     
   ]
 };
 
 const MapPage = () => {
   const { mapName } = useParams();
-  const decodedName = decodeURIComponent(mapName);
+  const decodedName = decodeURIComponent(mapName); // Decode the map name
   const navigate = useNavigate();
-  const videos = mapContent[decodedName] || [];
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const videos = mapContent[decodedName] || []; // Match the formatted map name
 
   return (
     <div className="map-page">
@@ -85,8 +89,8 @@ const MapPage = () => {
         </div>
 
         <div className="right-section">
-          <span className="tab" onClick={openModal}>
-            <FontAwesomeIcon icon={faUser} className="user-icon" />
+          <span className="tab" onClick={() => navigate("/")}>
+            <FontAwesomeIcon icon={faHome} className="home-icon" />
           </span>
           <span className="tab">
             <a href="mailto:nolanreactdev.com" target="_blank" rel="noreferrer">
@@ -112,7 +116,8 @@ const MapPage = () => {
           <span className="back-text">Go Back</span>
         </button>
 
-        <h1 className="map-title">{decodedName} Spawn Peek Guides</h1>
+        {/* Recapitalized Map Title */}
+        <h1 className="map-title">{capitalizeMapName(decodedName)} Spawn Peek Guides</h1>
 
         <div className="videos-container">
           {videos.map((video, index) => (
@@ -132,16 +137,6 @@ const MapPage = () => {
           ))}
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>About Us</h2>
-        <p>
-          We provide spawn peeks for players ranging from the casual level to pros. If you have any spawn peeks not on
-          the site, click the mail icon and send them to me!
-        </p>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
     </div>
   );
 };

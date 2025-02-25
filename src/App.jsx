@@ -6,7 +6,7 @@ import { faHome, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import MapDropdown from "./components/MapDropdown.jsx";
 import MapPage from "./components/MapPage.jsx";
-import Modal from "./components/Modal.jsx"; // Import the reusable Modal
+import Modal from "./components/Modal.jsx";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,7 +56,7 @@ function App() {
 
               {/* Main Content */}
               <div className="banner3">
-                <MapDropdown />
+                <MapDropdown /> {/* Only one search bar with typing and dropdown */}
               </div>
 
               {/* Modal */}

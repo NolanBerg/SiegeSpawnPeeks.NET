@@ -1,85 +1,109 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
-const maps = [
-  "Bank",
-  "Border",
-  "Chalet",
-  "Clubhouse",
-  "Coastline",
-  "Consulate",
-  "Emerald Plains",
-  "Kafe Dostoyevsky",
-  "Kanal",
-  "Lair",
-  "Nighthaven Labs",
-  "Oregon",
-  "Outback",
-  "Skyscraper",
-  "Theme Park",
-  "Villa"
-];
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Import magnifying glass icon
 
 const MapDropdown = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); // State for search input
+  const [filteredMaps, setFilteredMaps] = useState([]); // State for filtered maps
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
   const navigate = useNavigate();
 
-  const filteredMaps = maps.filter(map => 
-    map.toLowerCase().includes(searchTerm.toLowerCase())
-  ).sort();
+  // List of all maps
+  const maps = [
+    "Bank",
+    "Border",
+    "Chalet",
+    "Clubhouse",
+    "Coastline",
+    "Consulate",
+    "Emerald Plains",
+    "Kafe Dostoyevsky",
+    "Kanal",
+    "Lair",
+    "Nighthaven Labs",
+    "Oregon",
+    "Outback",
+    "Skyscraper",
+    "Theme Park",
+    "Villa",
+  ];
 
-  const handleMapSelect = (map) => {
-    navigate(`/map/${encodeURIComponent(map)}`);
-    setIsDropdownOpen(false);
-    setSearchTerm("");
+  // Handle search input change
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    // Filter maps based on the query
+    const filtered = maps.filter((map) =>
+      map.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredMaps(filtered);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!e.target.closest('.search-bar-container')) {
-        setIsDropdownOpen(false);
+  // Handle map selection (from dropdown or Enter key)
+  const handleMapSelection = (map) => {
+    const formattedMap = map.toLowerCase().replace(/\s+/g, "-"); // Format the map name
+    navigate(`/map/${formattedMap}`); // Navigate to the map page
+    setSearchQuery(""); // Clear the search bar
+    setFilteredMaps([]); // Clear the dropdown
+    setIsDropdownVisible(false); // Hide the dropdown
+  };
+
+  // Handle Enter key press
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && searchQuery.trim()) {
+      const selectedMap = maps.find((map) =>
+        map.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      if (selectedMap) {
+        handleMapSelection(selectedMap);
       }
-    };
-    
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+    }
+  };
+
+  // Handle search bar focus
+  const handleSearchFocus = () => {
+    setIsDropdownVisible(true); // Show dropdown when search bar is focused
+    setFilteredMaps(maps); // Show all maps initially
+  };
+
+  // Handle search bar blur (optional: hide dropdown when focus is lost)
+  const handleSearchBlur = () => {
+    setTimeout(() => {
+      setIsDropdownVisible(false); // Hide dropdown after a short delay
+    }, 200); // Adjust delay as needed
+  };
 
   return (
     <div className="search-bar-container">
-      <input
-        type="text"
-        placeholder="Search maps..."
-        className="search-bar"
-        value={searchTerm}
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-          setIsDropdownOpen(true);
-        }}
-        onFocus={() => setIsDropdownOpen(true)}
-      />
-      <button className="search-button">
-        <FontAwesomeIcon icon={faSearch} />
-      </button>
+      {/* Search Bar */}
+      <div className="search-bar-wrapper">
+        <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+        <input
+          type="text"
+          placeholder="Search for a map..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          onKeyDown={handleKeyDown}
+          onFocus={handleSearchFocus} // Show dropdown on focus
+          onBlur={handleSearchBlur} // Hide dropdown on blur (optional)
+          className="search-bar"
+        />
+      </div>
 
-      {isDropdownOpen && (
+      {/* Dropdown */}
+      {isDropdownVisible && (
         <div className="dropdown">
-          {filteredMaps.length > 0 ? (
-            filteredMaps.map((map) => (
-              <div
-                key={map}
-                className="dropdown-item"
-                onClick={() => handleMapSelect(map)}
-              >
-                {map}
-              </div>
-            ))
-          ) : (
-            <div className="dropdown-item">No matches found</div>
-          )}
+          {filteredMaps.map((map, index) => (
+            <div
+              key={index}
+              className="dropdown-item"
+              onClick={() => handleMapSelection(map)}
+            >
+              {map}
+            </div>
+          ))}
         </div>
       )}
     </div>

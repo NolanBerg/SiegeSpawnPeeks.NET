@@ -230,63 +230,66 @@ h1 {
   transform: translateY(0); /* Reset lift when clicked */
 }
 
+/* Search Bar Container */
 .search-bar-container {
-  position: relative; /* Add this line */
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%; /* Take up full width of banner3 */
-  margin-top: -375px; /* Move it 200px higher (adjust as needed) */
+  margin-top: -13em;
+}
+
+/* Search Bar Wrapper */
+.search-bar-wrapper {
+  position: relative;
+  width: 28em;
 }
 
 /* Search Bar Input */
 .search-bar {
-  width: 425px; /* Adjust width as needed */
-  height: 50px;
-  padding: 10px 20px;
-  border: 2px solid #61dafb; /* Border color */
-  border-radius: 25px 0 0 25px; /* Rounded left side */
-  outline: none; /* Remove default outline */
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* Adjust padding: more on the right for the icon */
+  border: 2px solid #61dafb;
+  border-radius: 25px;
+  outline: none;
   font-size: 1rem;
   color: white;
-  background-color: transparent; /* Transparent background */
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
 }
 
 .search-bar::placeholder {
-  color: #aaa; /* Placeholder text color */
+  color: #aaa;
 }
 
-/* Search Button */
-.search-button {
-  padding: 10px 20px;
-  height: 50px;
-  background-color: #61dafb; /* Button background color */
-  border: 2px solid #61dafb; /* Button border color */
-  border-radius: 0 25px 25px 0; /* Rounded right side */
-  cursor: pointer;
-  color: white;
-  font-size: 1.4rem;
-  transition: background-color 0.3s ease; /* Smooth transition */
+.search-bar:focus {
+  border-color: #4fa8d3;
 }
 
-.search-button:hover {
-  background-color: #4fa8d3; /* Darker blue on hover */
+/* Magnifying Glass Icon (Moved to the Right) */
+.search-icon {
+  position: absolute;
+  right: 10px; /* Position on the right */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #61dafb;
+  font-size: 1.2rem;
+  pointer-events: none; /* Prevent icon from blocking clicks */
 }
 
-/* Dropdown styles */
+/* Dropdown */
 .dropdown {
   position: absolute;
-  top: 60px; /* Position below the search bar */
+  top: 50px; /* Position below the search bar */
   left: 50%;
   transform: translateX(-50%);
-  width: 425px; /* Match search bar width */
-  max-height: 200px; /* Limit height */
-  overflow-y: auto; /* Add scroll if needed */
-  background-color: #282c34; /* Dark background */
-  border: 1px solid #61dafb; /* Bright blue border */
+  width: 300px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #282c34;
+  border: 1px solid #61dafb;
   border-radius: 5px;
-  z-index: 1000; /* Ensure it appears above other content */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .dropdown-item {
@@ -297,7 +300,7 @@ h1 {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(97, 218, 251, 0.1); /* Light blue background on hover */
+  background-color: rgba(97, 218, 251, 0.1);
 }
 
 /* Map Page Container */
@@ -412,7 +415,7 @@ h1 {
 .videos-container {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 45vw;
   height: auto;
   gap: 40px;
   margin: 30px auto 0; /* Center the container */
