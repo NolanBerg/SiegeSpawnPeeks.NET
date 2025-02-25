@@ -348,7 +348,7 @@ h1 {
 .videos-container {
   display: flex;
   flex-direction: column;
-  width: 45vw;
+  width: 70vw;
   height: auto;
   gap: 40px;
   margin: 30px auto 0; /* Center the container */
