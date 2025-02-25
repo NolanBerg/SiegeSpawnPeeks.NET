@@ -17,7 +17,7 @@ const mapContent = {
     { id: "c14nc9v87_A", title: "Gaming Room Window" }
   ],
   "Clubhouse": [
-    
+    { id: "yXdrASlSu0I", title: "Gym Window" }
   ],
   "Coastline": [
     
@@ -27,13 +27,14 @@ const mapContent = {
   ],
   "Emerald Plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
-    { id: "AfF7PpmC9OI", title: "Memorial Window" }
+    { id: "AfF7PpmC9OI", title: "Memorial Window" },
+    { id: "-Q0gedd5Ucs", title: "Golf Course Runout" }
   ],
   "Kafe Dostoyevsky": [
     
   ],
   "Kanal": [
-   
+    { id: "orwvwmDfibI", title: "Museum Door" }
   ],
   "Lair": [
    
@@ -51,6 +52,7 @@ const mapContent = {
     
   ],
   "Theme Park": [
+    { id: "tIncsIkQDLI", title: "Dragon Window" }
    
   ],
   "Villa": [
