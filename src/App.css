@@ -9,8 +9,6 @@
   align-items: center; /* Center horizontally */
   position: relative; /* Needed for absolute positioning of banner3 */
 }
-
-/* Banner styles */
 .banner {
   background-color: hsl(0, 0%, 10%); /* Dark gray */
   color: #282c34; /* Dark text */
@@ -19,47 +17,38 @@
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space between sections */
-  position: sticky; /* Make the banner sticky */
+  position: fixed; /* Make the banner sticky */
   top: 0; /* Stick to the top */
   z-index: 10; /* Ensure it stays above other content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
-
-/* Left Section: First Logo */
 .left-section {
   display: flex;
   align-items: center; /* Center logos vertically */
   justify-content: flex-start; /* Align to the left */
   flex: 1; /* Take up remaining space */
 }
-
-/* Middle Section: Second Logo */
 .middle-section {
   display: flex;
   align-items: center; /* Center logos vertically */
   justify-content: center; /* Center logos horizontally */
   flex: 1; /* Take up remaining space */
 }
-
-/* Right Section: Tabs */
 .right-section {
   display: flex;
   gap: 20px; /* Space between tabs */
   justify-content: flex-end; /* Align to the right */
   flex: 1; /* Take up remaining space */
 }
-
-/* Banner2: Divider Line */
 .banner2 {
   background-color: #61dafb;; /* White line */
   width: 100%; /* Full width */
-  height: 1px; /* Thin line */
+  height: 2px; /* Thin line */
   display: flex;
-  position: sticky; /* Make the banner sticky */
+  position: fixed; /* Make the banner sticky */
   top: 0; /* Stick to the top */
   z-index: 10; /* Ensure it stays above other content */
 }
-
 .banner3 {
   background-color: white; /* Fallback color */
   width: 100%; /* Full width */
@@ -79,8 +68,6 @@
   background-attachment: fixed; /* Keeps the background fixed */
   overflow-y: hidden; /* Disables vertical scrolling */
 }
-
-/* First Logo styles */
 .banner .logo {
   width: 45px; /* Adjust logo size */
   height: 55px; /* Adjust logo size */
@@ -88,13 +75,10 @@
   border: 2px solid white; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
 }
-
 .banner .logo:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; /* Smooth transition */
 }
-
-/* Second Logo styles */
 .second-logo {
   width: 140px; /* Adjust logo size */
   height: 65px; /* Adjust logo size */
@@ -102,8 +86,6 @@
   border: 2px solid #61dafb;; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
 }
-
-/* Title styles */
 h1 {
   margin-top: 40px; /* Add space between banner and title */
   font-size: 4.2rem;
@@ -115,14 +97,10 @@ h1 {
     -0.5px  0.5px 0 #000,
      0.5px  0.5px 0 #000; /* Black outline */
 }
-
-/* Icon styles */
 .tab svg {
   margin-right: 11px; /* Add space between the icon and text */
   vertical-align: middle; /* Align the icon vertically with the text */
 }
-
-/* Envelope and GitHub icon styles */
 .envelope-icon,
 .github-icon, 
 .user-icon, 
@@ -131,8 +109,6 @@ h1 {
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;
 }
-
-/* Hover effect for the icons */
 .tab:hover .envelope-icon,
 .tab:hover .github-icon,
 .tab:hover .user-icon, 
@@ -142,8 +118,6 @@ h1 {
   transition: transform 0.3s ease; 
   cursor: pointer;
 }
-
-/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -156,8 +130,6 @@ h1 {
   align-items: center;
   z-index: 1000; /* Ensure the modal is on top of everything */
 }
-
-/* Modal content */
 .modal {
   background: linear-gradient(145deg, #1e1e1e, #282c34); /* Gradient background */
   padding: 30px;
@@ -170,31 +142,23 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a lifted effect */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Modal header */
 .modal h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white; /* Bright blue for the header */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
-
-/* Modal paragraph */
 .modal p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #ddd; /* Light gray for better readability */
 }
-
-/* Modal list */
 .modal ul {
   list-style-type: none; /* Remove default bullets */
   padding: 0;
   margin-bottom: 20px;
 }
-
-/* Modal list items */
 .modal ul li {
   font-size: 1rem;
   padding: 10px;
@@ -204,8 +168,6 @@ h1 {
   border-left: 3px solid #61dafb; /* Accent border on the left */
   text-align: left;
 }
-
-/* Modal button */
 .modal button {
   margin-top: 20px;
   padding: 12px 24px;
@@ -218,33 +180,23 @@ h1 {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
-
-/* Modal button hover effect */
 .modal button:hover {
   background-color: #4fa8d3; /* Darker blue on hover */
   transform: translateY(-2px); /* Slight lift on hover */
 }
-
-/* Modal button active effect */
 .modal button:active {
   transform: translateY(0); /* Reset lift when clicked */
 }
-
-/* Search Bar Container */
 .search-bar-container {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: -13em;
 }
-
-/* Search Bar Wrapper */
 .search-bar-wrapper {
   position: relative;
   width: 28em;
 }
-
-/* Search Bar Input */
 .search-bar {
   width: 100%;
   padding: 10px 40px 10px 20px; /* Adjust padding: more on the right for the icon */
@@ -256,16 +208,12 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   transition: border-color 0.3s ease;
 }
-
 .search-bar::placeholder {
   color: #aaa;
 }
-
 .search-bar:focus {
   border-color: #4fa8d3;
 }
-
-/* Magnifying Glass Icon (Moved to the Right) */
 .search-icon {
   position: absolute;
   right: 10px; /* Position on the right */
@@ -275,8 +223,6 @@ h1 {
   font-size: 1.2rem;
   pointer-events: none; /* Prevent icon from blocking clicks */
 }
-
-/* Dropdown */
 .dropdown {
   position: absolute;
   top: 50px; /* Position below the search bar */
@@ -291,19 +237,15 @@ h1 {
   z-index: 1000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .dropdown-item {
   padding: 10px;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .dropdown-item:hover {
   background-color: rgba(97, 218, 251, 0.1);
 }
-
-/* Map Page Container */
 .map-page {
   display: flex;
   flex-direction: column;
@@ -311,11 +253,9 @@ h1 {
   background: #282c34;
   color: white;
 }
-
-/* Banner Fix */
 .bannermp {
+  position: fixed;
   width: 100vw;
-  position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -328,8 +268,6 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
-
-/* First Logo styles */
 .bannermp .logo {
   width: 45px; /* Adjust logo size */
   height: 55px; /* Adjust logo size */
@@ -337,26 +275,25 @@ h1 {
   border: 2px solid white; /* Add a border */
   border-radius: 5px; /* Slightly rounded corners */
 }
-
 .bannermp .logo:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; /* Smooth transition */
 }
-
-/* Banner Fix */
 .banner2mp {
-  height: 1px;
+  position: fixed;
+  height: 2px;
   width: 100vw;
-  position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   background-color: #61dafb;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 11;
 }
-
-/* Content Area */
 .map-content {
   flex: 1;
   padding: 20px;
@@ -365,8 +302,8 @@ h1 {
   margin: 0 auto;
   position: relative;
   text-align: center;
+  margin-top: 5em;
 }
-
 .back-button {
   position: fixed; /* Changed from absolute to fixed */
   left: 20px;
@@ -389,20 +326,17 @@ h1 {
   transition: transform 0.3s ease; 
   cursor: pointer;
 }
-
 .arrow-icon{
   font-size: 38px; /* Adjust the size as needed */
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;
   margin-right: 8px;
 }
-
 .back-text {
   font-weight: bold;
   font-size: 1.4em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .map-title {
   text-align: center;
   color: white;
@@ -411,7 +345,6 @@ h1 {
   line-height: 1.2; /* Ensure consistent line height */
   min-height: 60px; /* Fixed height to prevent layout shift */
 }
-
 .videos-container {
   display: flex;
   flex-direction: column;
@@ -421,7 +354,6 @@ h1 {
   margin: 30px auto 0; /* Center the container */
   max-width: 800px; /* Constrain width */
 }
-
 .video-card {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -431,16 +363,14 @@ h1 {
   max-width: 800px; /* Match videos-container max-width */
   margin: 0 auto; /* Center the card */
 }
-
 .video-card:hover {
   transform: translateY(-5px);
 }
-
 .video-card h3 {
   margin-bottom: 15px;
   color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -448,7 +378,6 @@ h1 {
   border-radius: 8px;
   overflow: hidden;
 }
-
 .video-wrapper iframe {
   position: absolute;
   top: 0;
