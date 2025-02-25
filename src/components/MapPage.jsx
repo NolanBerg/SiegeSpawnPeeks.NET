@@ -1,25 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faEnvelope, faUser, faLeftLong} from "@fortawesome/free-solid-svg-icons"; // Added faArrowLeft
+import { faHome, faEnvelope, faUser, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Modal from "./Modal.jsx"; // Import the reusable Modal
 
-// Sample video data - modify this to add/remove videos for each map
 const mapContent = {
-  Bank: [
+  "Bank": [
     { id: "QzAPty06Yj0", title: "Alley Spawn Runout" },
-    { id: "def456", title: "Alleyway Angle" },
-    { id: "ghi789", title: "Roof Access Strat" }
   ],
-  Border: [
-    { id: "xyz123", title: "West Wall Tactics" },
-    { id: "uvw456", title: "Customs Breach" }
+  "Border": [
+    
   ],
-  Chalet: [
-    { id: "jkl012", title: "Penthouse Control" }
+  "Chalet": [
+    { id: "vx63egdPMv8", title: "Hallway Window" },
+    { id: "c14nc9v87_A", title: "Gaming Room Window" }
   ],
-  Coastline: [
-    { id: "jkl012", title: "Penthouse Control" }
+  "Clubhouse": [
+    
+  ],
+  "Coastline": [
+    
+  ],
+  "Consulate": [
+    
+  ],
+  "Emerald Plains": [
+    { id: "ixusGfk63XY", title: "Archive Runout" },
+    { id: "AfF7PpmC9OI", title: "Memorial Window" }
+  ],
+  "Kafe Dostoyevsky": [
+    
+  ],
+  "Kanal": [
+   
+  ],
+  "Lair": [
+   
+  ],
+  "Nighthaven Labs": [
+    
+  ],
+  "Oregon": [
+    
+  ],
+  "Outback": [
+    
+  ],
+  "Skyscraper": [
+    
+  ],
+  "Theme Park": [
+   
+  ],
+  "Villa": [
+    
   ]
 };
 
@@ -28,10 +63,10 @@ const MapPage = () => {
   const decodedName = decodeURIComponent(mapName);
   const navigate = useNavigate();
   const videos = mapContent[decodedName] || [];
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
 
-  const openModal = () => {
-    // Add modal logic if needed
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="map-page">
@@ -48,9 +83,6 @@ const MapPage = () => {
         </div>
 
         <div className="right-section">
-          <span className="tab" onClick={() => navigate("/")}>
-            <FontAwesomeIcon icon={faHome} className="home-icon" />
-          </span>
           <span className="tab" onClick={openModal}>
             <FontAwesomeIcon icon={faUser} className="user-icon" />
           </span>
@@ -79,7 +111,7 @@ const MapPage = () => {
         </button>
 
         <h1 className="map-title">{decodedName} Spawn Peek Guides</h1>
-        
+
         <div className="videos-container">
           {videos.map((video, index) => (
             <div key={index} className="video-card">
@@ -98,6 +130,16 @@ const MapPage = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <h2>About Us</h2>
+        <p>
+          We provide spawn peeks for players ranging from the casual level to pros. If you have any spawn peeks not on
+          the site, click the mail icon and send them to me!
+        </p>
+        <button onClick={closeModal}>Close</button>
+      </Modal>
     </div>
   );
 };

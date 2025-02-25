@@ -1,30 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom"; // Remove BrowserRouter import
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import MapDropdown from "./components/MapDropdown.jsx";
 import MapPage from "./components/MapPage.jsx";
+import Modal from "./components/Modal.jsx"; // Import the reusable Modal
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const modalRef = useRef(null);
-  const navigate = useNavigate();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
-        closeModal();
-      }
-    };
-
-    isModalOpen && document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isModalOpen]);
 
   return (
     <div className="App">
@@ -72,19 +60,14 @@ function App() {
               </div>
 
               {/* Modal */}
-              {isModalOpen && (
-                <div className="modal-overlay">
-                  <div className="modal" ref={modalRef}>
-                    <h2>About Us</h2>
-                    <p>We provide spawn peeks for players ranging 
-                      from the casual level to pros. If you have any
-                      spawn peeks not on the site click the mail icon
-                      and send them to me!
-                    </p>
-                    <button onClick={closeModal}>Close</button>
-                  </div>
-                </div>
-              )}
+              <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <h2>About Us</h2>
+                <p>
+                  We provide spawn peeks for players ranging from the casual level to pros. If you have any spawn peeks
+                  not on the site, click the mail icon and send them to me!
+                </p>
+                <button onClick={closeModal}>Close</button>
+              </Modal>
             </>
           }
         />
