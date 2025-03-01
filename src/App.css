@@ -452,7 +452,8 @@ h1 {
   .search-icon {
     font-size: 1.5rem; /* Slightly larger search icon */
     right: 15px;
-    margin-bottom: 10px; /* Adjust position for better alignment */
+    margin-bottom: 10px;
+    margin-top: -20px; /* Adjust position for better alignment */
   }
 
   /* Adjust dropdown width to match the search bar */
