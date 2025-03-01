@@ -431,7 +431,7 @@ h1 {
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 600px; /* Increase maximum width */
+    max-width: 750px; /* Increase maximum width */
   }
 
   .search-bar {
