@@ -393,8 +393,15 @@ h1 {
   /* Adjust banner layout */
   .banner, 
   .banner.mp {
-    padding: 10px; /* Reduce padding */
-    margin: 0;
+  padding: 10px; /* Reduce padding */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between sections */
+  position: fixed; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
   }
 
   /* Reduce logo sizes */
