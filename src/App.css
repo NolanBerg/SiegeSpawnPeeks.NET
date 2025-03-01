@@ -435,6 +435,7 @@ h1 {
     padding: 14px 45px 14px 20px; /* Increase padding for better touch interaction */
     width: 100%; /* Full width */
     min-width: 90vw;
+    margin-top: -20px;
   }
 
   .search-icon {
