@@ -429,7 +429,7 @@ h1 {
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 300px; /* Limit maximum width */
+    max-width: 80vw; /* Limit maximum width */
   }
 
   .search-bar {
