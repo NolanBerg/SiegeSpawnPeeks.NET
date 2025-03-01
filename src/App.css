@@ -390,6 +390,8 @@ h1 {
 
 /* Existing CSS remains the same */
 
+/* Existing CSS remains the same */
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Adjust banner layout */
@@ -422,28 +424,32 @@ h1 {
     gap: 10px; /* Reduce gap between icons */
   }
 
-  /* Make the search bar responsive */
+  /* Make the search bar wider and more user-friendly */
   .banner3 {
     padding: 0 10px; /* Add horizontal padding */
   }
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 80vw; /* Limit maximum width */
+    max-width: 450px; /* Increase maximum width */
   }
 
   .search-bar {
-    font-size: 0.9rem; /* Smaller font size */
-    padding: 8px 30px 8px 15px; /* Adjust padding */
+    font-size: 1rem; /* Slightly larger font size */
+    padding: 12px 40px 12px 20px; /* Increase padding for better touch interaction */
+    width: 100%; /* Full width */
   }
 
   .search-icon {
-    font-size: 1rem; /* Smaller search icon */
+    font-size: 1.2rem; /* Slightly larger search icon */
+    right: 15px; /* Adjust position for better alignment */
   }
 
-  /* Adjust dropdown width */
+  /* Adjust dropdown width to match the search bar */
   .dropdown {
-    width: 90%; /* Make dropdown responsive */
-    max-width: 300px; /* Limit maximum width */
+    width: 100%; /* Full width to match the search bar */
+    max-width: 400px; /* Match the search bar's max-width */
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
