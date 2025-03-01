@@ -391,8 +391,10 @@ h1 {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Adjust banner layout */
-  .banner {
+  .banner, 
+  .banner.mp {
     padding: 10px; /* Reduce padding */
+    margin: 0;
   }
 
   /* Reduce logo sizes */
