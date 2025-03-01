@@ -60,7 +60,8 @@ const mapContent = {
     { id: "O6Zz52TcNjk", title: "White Stairs Door" },
     { id: "tj9W851pwBA", title: "Bridge Window" },
     { id: "vAEpksRe6Y4", title: "Supply Corridor Door" },
-    { id: "1eTip5fS6Zc", title: "Reception Window" }
+    { id: "1eTip5fS6Zc", title: "Reception Window" },
+    { id: "WT9UdGo4azs", title: "Locker Room Window" }
   ],
   "lair": [
     { id: "39tas0DUBTE", title: "Warehouse Runout" }
