@@ -427,7 +427,8 @@ h1 {
 
   /* Adjust spacing in the right section */
   .right-section {
-    gap: 5px; /* Reduce gap between icons */
+    gap: 2px;
+    margin-right: -15px /* Reduce gap between icons */
   }
 
   /* Make the search bar bigger */
