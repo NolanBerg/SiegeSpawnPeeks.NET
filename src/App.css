@@ -387,3 +387,63 @@ h1 {
   height: 100%;
   border: none;
 }
+
+/* Existing CSS remains the same */
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Adjust banner layout */
+  .banner {
+    padding: 10px; /* Reduce padding */
+  }
+
+  /* Reduce logo sizes */
+  .banner .logo {
+    width: 35px; /* Smaller logo */
+    height: 45px; /* Smaller logo */
+    margin-left: 5px; /* Reduce margin */
+  }
+
+  .second-logo {
+    width: 100px; /* Smaller second logo */
+    height: 50px; /* Smaller second logo */
+  }
+
+  /* Reduce icon sizes */
+  .envelope-icon,
+  .github-icon,
+  .user-icon,
+  .home-icon {
+    font-size: 24px; /* Smaller icons */
+  }
+
+  /* Adjust spacing in the right section */
+  .right-section {
+    gap: 10px; /* Reduce gap between icons */
+  }
+
+  /* Make the search bar responsive */
+  .banner3 {
+    padding: 0 10px; /* Add horizontal padding */
+  }
+
+  .search-bar-wrapper {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Limit maximum width */
+  }
+
+  .search-bar {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 8px 30px 8px 15px; /* Adjust padding */
+  }
+
+  .search-icon {
+    font-size: 1rem; /* Smaller search icon */
+  }
+
+  /* Adjust dropdown width */
+  .dropdown {
+    width: 90%; /* Make dropdown responsive */
+    max-width: 300px; /* Limit maximum width */
+  }
+}
