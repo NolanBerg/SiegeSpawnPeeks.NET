@@ -403,8 +403,8 @@ h1 {
   }
 
   .second-logo {
-    width: 100px; /* Smaller second logo */
-    height: 50px; /* Smaller second logo */
+    width: 120px; /* Smaller second logo */
+    height: 65px; /* Smaller second logo */
   }
 
   /* Reduce icon sizes */
@@ -412,12 +412,12 @@ h1 {
   .github-icon,
   .user-icon,
   .home-icon {
-    font-size: 24px; /* Smaller icons */
+    font-size: 28px; /* Smaller icons */
   }
 
   /* Adjust spacing in the right section */
   .right-section {
-    gap: 10px; /* Reduce gap between icons */
+    gap: 5px; /* Reduce gap between icons */
   }
 
   /* Make the search bar bigger */
