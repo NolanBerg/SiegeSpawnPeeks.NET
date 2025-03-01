@@ -427,13 +427,12 @@ h1 {
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 500px; /* Increase maximum width for a bigger search bar */
   }
 
   .search-bar {
     font-size: 1.1rem; /* Slightly larger font size */
     padding: 14px 45px 14px 20px; /* Increase padding for better touch interaction */
-    width: 100%; /* Full width */
+    width: 90 vw; /* Full width */
   }
 
   .search-icon {
@@ -451,7 +450,7 @@ h1 {
 
   /* Fix map title position on mobile */
   .map-title {
-    margin-top: 120px; /* Increased space above the title */
+    margin-top: 100px; /* Increased space above the title */
     font-size: 2rem; /* Adjust font size for mobile */
   }
 
