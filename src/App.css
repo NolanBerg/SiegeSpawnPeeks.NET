@@ -388,8 +388,6 @@ h1 {
   border: none;
 }
 
-/* Existing CSS remains the same */
-
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Adjust banner layout */
@@ -422,32 +420,44 @@ h1 {
     gap: 10px; /* Reduce gap between icons */
   }
 
-  /* Make the search bar wider */
+  /* Make the search bar bigger */
   .banner3 {
     padding: 0 10px; /* Add horizontal padding */
   }
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 450px; /* Increase maximum width for a longer search bar */
+    min-width: 300px;
+    max-width: 500px; /* Increase maximum width for a bigger search bar */
   }
 
   .search-bar {
-    font-size: 1rem; /* Slightly larger font size */
-    padding: 12px 40px 12px 20px; /* Increase padding for better touch interaction */
+    font-size: 1.1rem; /* Slightly larger font size */
+    padding: 14px 45px 14px 20px; /* Increase padding for better touch interaction */
     width: 100%; /* Full width */
   }
 
   .search-icon {
-    font-size: 1.2rem; /* Slightly larger search icon */
+    font-size: 1.3rem; /* Slightly larger search icon */
     right: 15px; /* Adjust position for better alignment */
   }
 
   /* Adjust dropdown width to match the search bar */
   .dropdown {
     width: 100%; /* Full width to match the search bar */
-    max-width: 450px; /* Match the search bar's max-width */
+    max-width: 500px; /* Match the search bar's max-width */
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  /* Fix map title position on mobile */
+  .map-title {
+    margin-top: 80px; /* Add more space above the title */
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  /* Adjust map content spacing */
+  .map-content {
+    margin-top: 100px; /* Add more space above the content */
   }
 }
