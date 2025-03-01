@@ -66,23 +66,31 @@ const mapContent = {
     { id: "39tas0DUBTE", title: "Warehouse Runout" }
   ],
   "nighthaven-labs": [
-    
+    { id: "ZUJP374AFjA", title: "Vending Runout" },
+    { id: "T2-i7CN35Bg", title: "West Warehouse Runout" }
   ],
   "oregon": [
-    
+    { id: "NK0XnqSoVDk", title: "Main Runout" },
+    { id: "aE5mBfPUYMc", title: "Garage Door" }
   ],
   "outback": [
-    
+    { id: "trS5tX2E0zc", title: "Dorms Window" },
+    { id: "bgyLoo1xPMM", title: "Garage Runout" },
+    { id: "tC_i2i86_Uc", title: "Shark Window" },
+    { id: "6_JBE_io3Zs", title: "Restaurant Lobby Door" }
   ],
   "skyscraper": [
-    
+    { id: "MRus9jC4qdc", title: "Walk-in Window" },
+    { id: "w0gj10rj6lQ", title: "Terrace Window" }
   ],
   "theme-park": [
-    { id: "tIncsIkQDLI", title: "Dragon Window" }
-   
+    { id: "tIncsIkQDLI", title: "Dragon Window" },
+    { id: "hKYP7YbC2V8", title: "Break Room Window" },
+    { id: "7u2nLf5ttcc", title: "Arcade Entrance Runout" }
   ],
   "villa": [
-    
+    { id: "HrXDSwtqQ_I", title: "Old Office Runout" },
+    { id: "Gtuh8S5qVmc", title: "Closet Window" }
   ]
 };
 
