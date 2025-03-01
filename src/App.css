@@ -427,13 +427,14 @@ h1 {
 
   .search-bar-wrapper {
     width: 100%; /* Full width on mobile */
-    max-width: 90vw;
+    min-width: 90vw;
   }
 
   .search-bar {
     font-size: 1.1rem; /* Slightly larger font size */
     padding: 14px 45px 14px 20px; /* Increase padding for better touch interaction */
     width: 100%; /* Full width */
+    min-width: 90vw;
   }
 
   .search-icon {
