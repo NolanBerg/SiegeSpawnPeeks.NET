@@ -399,7 +399,7 @@ h1 {
   .banner .logo {
     width: 35px; /* Smaller logo */
     height: 45px; /* Smaller logo */
-    margin-left: 5px; /* Reduce margin */
+    margin-left: 15px; /* Reduce margin */
   }
 
   .second-logo {
