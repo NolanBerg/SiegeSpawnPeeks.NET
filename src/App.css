@@ -402,6 +402,8 @@ h1 {
   top: 0; /* Stick to the top */
   z-index: 10; /* Ensure it stays above other content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  margin-left: 0;
+  margin-right: 0;
   }
 
   /* Reduce logo sizes */
@@ -409,7 +411,7 @@ h1 {
   .bannermp .logo {
     width: 35px; /* Smaller logo */
     height: 45px; /* Smaller logo */
-    margin-left: 15px; /* Reduce margin */
+    margin-left: 10px;
   }
 
   .second-logo {
