@@ -14,38 +14,56 @@ const capitalizeMapName = (name) => {
 
 const mapContent = {
   "bank": [
-    { id: "QzAPty06Yj0", title: "Alley Spawn Runout" },
+    { id: "QzAPty06Yj0", title: "Alley Spawn Runout" }
   ],
   "border": [
-    
+    { id: "Kfu5IIRLHOk", title: "Detention Wall" },
+    { id: "GRs5EwILLGU", title: "Detention Runout" }
   ],
   "chalet": [
     { id: "vx63egdPMv8", title: "Hallway Window" },
     { id: "c14nc9v87_A", title: "Gaming Room Window" },
-    { id: "9A57OzSDFBs", title: "Mezzanine Floor" }
+    { id: "9A57OzSDFBs", title: "Mezzanine Floor" },
+    { id: "OLoDLyiyhVg", title: "Car Garage Runout" },
+    { id: "dE4Gd5h41fg", title: "Trophy Window" }
   ],
   "clubhouse": [
-    { id: "yXdrASlSu0I", title: "Gym Window" }
+    { id: "yXdrASlSu0I", title: "Gym Window" },
+    { id: "9KXLdlpKvOE", title: "Construction Runout" },
+    { id: "PDRZWsQMXeg", title: "Junkyard Door" }
   ],
   "coastline": [
-    
+    { id: "KyIbFvHWm3Q", title: "Sunrise Window" },
+    { id: "zdEe-0nDM4c", title: "Hookah Window" },
+    { id: "2w-RucNAsRw", title: "VIP Runout" },
+    { id: "j3qWWzyl2Co", title: "Pool Runout" },
+    { id: "IiYlvDq2N30", title: "Pool Nitro" },
+    { id: "AyXCYJpwbvc", title: "Ruins Runout" },
+    { id: "h3PfH-TMLtA", title: "Hallway Window" },
+    { id: "ueIVwbVU5w4", title: "Pool Door" }
   ],
   "consulate": [
-    
+    { id: "Ps4YFBQIg50", title: "Hallway Window" },
+    { id: "nchmYK1QYzk", title: "Visa Window" }
   ],
   "emerald-plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
     { id: "AfF7PpmC9OI", title: "Memorial Window" },
     { id: "-Q0gedd5Ucs", title: "Golf Course Runout" }
   ],
-  "kafe-dostoyevsky": [
-    
+  "kafe-dostoyevsky": [ 
+    { id: "0o-78ZUQb9M", title: "Park Door" },
+    { id: "vlWGtyVlwwA", title: "Cigar Window" }
   ],
   "kanal": [
-    { id: "orwvwmDfibI", title: "Museum Door" }
+    { id: "orwvwmDfibI", title: "Museum Door" },
+    { id: "O6Zz52TcNjk", title: "White Stairs Door" },
+    { id: "tj9W851pwBA", title: "Bridge Window" },
+    { id: "vAEpksRe6Y4", title: "Supply Corridor Door" },
+    { id: "1eTip5fS6Zc", title: "Reception Window" }
   ],
   "lair": [
-   
+    { id: "39tas0DUBTE", title: "Warehouse Runout" }
   ],
   "nighthaven-labs": [
     
@@ -93,7 +111,7 @@ const MapPage = () => {
             <FontAwesomeIcon icon={faHome} className="home-icon" />
           </span>
           <span className="tab">
-            <a href="mailto:nolanreactdev.com" target="_blank" rel="noreferrer">
+            <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
             </a>
           </span>
@@ -117,7 +135,7 @@ const MapPage = () => {
         </button>
 
         {/* Recapitalized Map Title */}
-        <h1 className="map-title">{capitalizeMapName(decodedName)} Spawn Peek Guides</h1>
+        <h1 className="map-title">{capitalizeMapName(decodedName)} </h1>
 
         <div className="videos-container">
           {videos.map((video, index) => (

@@ -39,7 +39,7 @@ function App() {
                     <FontAwesomeIcon icon={faUser} className="user-icon" />
                   </span>
                   <span className="tab">
-                    <a href="mailto:nolanreactdev@email.com" target="_blank" rel="noreferrer">
+                    <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
                     </a>
                   </span>
