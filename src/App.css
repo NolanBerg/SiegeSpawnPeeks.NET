@@ -410,6 +410,7 @@ h1 {
     width: 35px; /* Smaller logo */
     height: 45px; /* Smaller logo */
     margin-right: 20px;
+    padding: 20px;
   }
 
   .second-logo {
