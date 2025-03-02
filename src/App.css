@@ -442,15 +442,15 @@ h1 {
   }
 
   .search-bar {
-    font-size: 1.1rem; /* Slightly larger font size */
-    padding: 14px 45px 14px 20px; /* Increase padding for better touch interaction */
+    font-size: .9rem; /* Slightly larger font size */
+    padding: 12px 42px 12px 18px; /* Increase padding for better touch interaction */
     width: 100%; /* Full width */
     min-width: 90vw;
     margin-top: -20px;
   }
 
   .search-icon {
-    font-size: 1.4rem; /* Slightly larger search icon */
+    font-size: 1.3rem; /* Slightly larger search icon */
     right: 15px;
     margin-bottom: 10px;
     margin-top: -10px; /* Adjust position for better alignment */
