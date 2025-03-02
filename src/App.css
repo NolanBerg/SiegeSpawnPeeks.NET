@@ -414,7 +414,6 @@ h1 {
   .second-logo {
     width: 140px; /* Smaller second logo */
     height: 75px; /* Smaller second logo */
-    padding: 20px;
   }
 
   /* Reduce icon sizes */
@@ -428,7 +427,7 @@ h1 {
   /* Adjust spacing in the right section */
   .right-section {
     gap: 2px;
-    margin-left: auto; /* Reduce gap between icons */
+    margin-left: 20px; /* Reduce gap between icons */
   }
 
   /* Make the search bar bigger */
