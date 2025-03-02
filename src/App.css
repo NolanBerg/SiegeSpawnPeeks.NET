@@ -414,7 +414,7 @@ h1 {
   .second-logo {
     width: 140px; /* Smaller second logo */
     height: 75px; /* Smaller second logo */
-    margin-right: 20px;
+    padding: 20px;
   }
 
   /* Reduce icon sizes */
