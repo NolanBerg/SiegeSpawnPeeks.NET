@@ -409,13 +409,12 @@ h1 {
   .bannermp .logo {
     width: 35px; /* Smaller logo */
     height: 45px; /* Smaller logo */
-    margin-right: 20px;
-    padding: 20px;
   }
 
   .second-logo {
     width: 140px; /* Smaller second logo */
     height: 75px; /* Smaller second logo */
+    margin-right: 20px;
   }
 
   /* Reduce icon sizes */
