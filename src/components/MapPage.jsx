@@ -14,7 +14,8 @@ const capitalizeMapName = (name) => {
 
 const mapContent = {
   "bank": [
-    { id: "QzAPty06Yj0", title: "Alley Spawn Runout" }
+    { id: "QzAPty06Yj0", title: "Alley Spawn Runout" },
+    { id: "Ia-sY4LU0Ps", title: "Main Entrance Door" }
   ],
   "border": [
     { id: "Kfu5IIRLHOk", title: "Detention Wall" },
@@ -49,11 +50,12 @@ const mapContent = {
   "emerald-plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
     { id: "AfF7PpmC9OI", title: "Memorial Window" },
-    { id: "-Q0gedd5Ucs", title: "Golf Course Runout" }
+    { id: "-Q0gedd5Ucs", title: "Stables Runout" }
   ],
   "kafe-dostoyevsky": [ 
     { id: "0o-78ZUQb9M", title: "Park Door" },
-    { id: "vlWGtyVlwwA", title: "Cigar Window" }
+    { id: "vlWGtyVlwwA", title: "Cigar Window" },
+    { id: "2iNfVqSDQDM", title: "Cigar Window pt2" }
   ],
   "kanal": [
     { id: "orwvwmDfibI", title: "Museum Door" },
@@ -61,10 +63,13 @@ const mapContent = {
     { id: "tj9W851pwBA", title: "Bridge Window" },
     { id: "vAEpksRe6Y4", title: "Supply Corridor Door" },
     { id: "1eTip5fS6Zc", title: "Reception Window" },
-    { id: "WT9UdGo4azs", title: "Locker Room Window" }
+    { id: "WT9UdGo4azs", title: "Locker Room Window" },
+    { id: "lyZPk1qTcfQ", title: "Reception Window pt2" },
+    { id: "ZQDBoJcIN-E", title: "Lounge Window" }
   ],
   "lair": [
-    { id: "39tas0DUBTE", title: "Warehouse Runout" }
+    { id: "39tas0DUBTE", title: "Warehouse Runout" },
+    { id: "TdZXnfDrf8k", title: "Operational Window" }
   ],
   "nighthaven-labs": [
     { id: "ZUJP374AFjA", title: "Vending Runout" },
