@@ -87,7 +87,7 @@ const mapContent = {
   ],
   "skyscraper": [
     { id: "MRus9jC4qdc", title: "Walk-in Window" },
-    { id: "w0gj10rj6lQ", title: "Terrace Window" }
+    { id: "w0gj10rj6lQ", title: "Terrace Runout" }
   ],
   "theme-park": [
     { id: "tIncsIkQDLI", title: "Dragon Window" },
