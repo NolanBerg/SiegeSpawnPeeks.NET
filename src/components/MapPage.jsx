@@ -15,7 +15,9 @@ const capitalizeMapName = (name) => {
 const mapContent = {
   "bank": [
     { id: "QzAPty06Yj0", title: "Alley Spawn Runout" },
-    { id: "Ia-sY4LU0Ps", title: "Main Entrance Door" }
+    { id: "Ia-sY4LU0Ps", title: "Main Entrance Door" },
+    { id: "kgkNIdB8R-w", title: "Square Window" },
+    { id: "VImMMdOh2fI", title: "Garage Ramp Runout" }
   ],
   "border": [
     { id: "Kfu5IIRLHOk", title: "Detention Wall" },
@@ -26,7 +28,8 @@ const mapContent = {
     { id: "c14nc9v87_A", title: "Gaming Room Window" },
     { id: "9A57OzSDFBs", title: "Mezzanine Floor" },
     { id: "OLoDLyiyhVg", title: "Car Garage Runout" },
-    { id: "dE4Gd5h41fg", title: "Trophy Window" }
+    { id: "dE4Gd5h41fg", title: "Trophy Window" },
+    { id: "D3prdVUTGRI", title: "Bedroom Window" }
   ],
   "clubhouse": [
     { id: "yXdrASlSu0I", title: "Gym Window" },
@@ -41,16 +44,19 @@ const mapContent = {
     { id: "IiYlvDq2N30", title: "Pool Nitro" },
     { id: "AyXCYJpwbvc", title: "Ruins Runout" },
     { id: "h3PfH-TMLtA", title: "Hallway Window" },
-    { id: "ueIVwbVU5w4", title: "Pool Door" }
+    { id: "ueIVwbVU5w4", title: "Pool Door" },
+    { id: "8jdlzKGBVG4", title: "Office Door" }
   ],
   "consulate": [
     { id: "Ps4YFBQIg50", title: "Hallway Window" },
-    { id: "nchmYK1QYzk", title: "Visa Window" }
+    { id: "nchmYK1QYzk", title: "Visa Window" },
+    { id: "GYKQQCCYM7A", title: "Yellow Stairs Door" }
   ],
   "emerald-plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
     { id: "AfF7PpmC9OI", title: "Memorial Window" },
-    { id: "-Q0gedd5Ucs", title: "Stables Runout" }
+    { id: "-Q0gedd5Ucs", title: "Stables Runout" },
+    { id: "yz8I7LpR8Rs", title: "Back Entrance Door" }
   ],
   "kafe-dostoyevsky": [ 
     { id: "0o-78ZUQb9M", title: "Park Door" },
@@ -73,7 +79,8 @@ const mapContent = {
   ],
   "nighthaven-labs": [
     { id: "ZUJP374AFjA", title: "Vending Runout" },
-    { id: "T2-i7CN35Bg", title: "West Warehouse Runout" }
+    { id: "T2-i7CN35Bg", title: "West Warehouse Runout" },
+    { id: "4hLIQGWfGTE", title: "Lobby Stairs Door" }
   ],
   "oregon": [
     { id: "NK0XnqSoVDk", title: "Main Runout" },
@@ -87,7 +94,8 @@ const mapContent = {
   ],
   "skyscraper": [
     { id: "MRus9jC4qdc", title: "Walk-in Window" },
-    { id: "w0gj10rj6lQ", title: "Terrace Runout" }
+    { id: "w0gj10rj6lQ", title: "Terrace Runout" },
+    { id: "e_xTk39Q5m4", title: "Ventilation Runout" }
   ],
   "theme-park": [
     { id: "tIncsIkQDLI", title: "Dragon Window" },
@@ -96,7 +104,8 @@ const mapContent = {
   ],
   "villa": [
     { id: "HrXDSwtqQ_I", title: "Old Office Runout" },
-    { id: "Gtuh8S5qVmc", title: "Closet Window" }
+    { id: "Gtuh8S5qVmc", title: "Closet Window" },
+    { id: "8fDsy6nfbhA", title: "Closet Runout" }
   ]
 };
 
