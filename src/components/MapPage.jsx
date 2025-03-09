@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope, faUser, faLeftLong } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Utility function to capitalize each word
 const capitalizeMapName = (name) => {
@@ -125,13 +125,18 @@ const MapPage = () => {
             <FontAwesomeIcon icon={faHome} className="home-icon" />
           </span>
           <span className="tab">
-            <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
+            <a href="https://www.youtube.com/@Nolan_Berg" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />
             </a>
           </span>
           <span className="tab">
             <a href="https://github.com/NolanBerg/SiegeSpawnPeeks.NET" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faGithub} className="github-icon" />
+            </a>
+          </span>
+          <span className="tab">
+            <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
             </a>
           </span>
         </div>
