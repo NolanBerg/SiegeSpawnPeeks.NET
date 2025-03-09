@@ -104,7 +104,8 @@ h1 {
 .envelope-icon,
 .github-icon, 
 .user-icon, 
-.home-icon{
+.home-icon,
+.youtube-icon{
   font-size: 34px; /* Adjust the size as needed */
   vertical-align: middle; /* Align the icon vertically with the text */
   color: #61dafb;
@@ -112,7 +113,8 @@ h1 {
 .tab:hover .envelope-icon,
 .tab:hover .github-icon,
 .tab:hover .user-icon, 
-.tab:hover .home-icon {
+.tab:hover .home-icon,
+.tab:hover .youtube-icon {
   color: white;
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: transform 0.3s ease; 
@@ -421,7 +423,8 @@ h1 {
   .envelope-icon,
   .github-icon,
   .user-icon,
-  .home-icon {
+  .home-icon,
+  .youtube-icon {
     font-size: 28px; /* Smaller icons */
   }
 

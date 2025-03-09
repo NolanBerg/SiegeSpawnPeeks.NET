@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons"; // Added faYoutube
 import MapDropdown from "./components/MapDropdown.jsx";
 import MapPage from "./components/MapPage.jsx";
 import Modal from "./components/Modal.jsx";
@@ -38,14 +38,20 @@ function App() {
                   <span className="tab" onClick={openModal}>
                     <FontAwesomeIcon icon={faUser} className="user-icon" />
                   </span>
+                  {/* Added YouTube Icon */}
                   <span className="tab">
-                    <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
-                      <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
+                    <a href="https://www.youtube.com/@Nolan_Berg" target="_blank" rel="noreferrer">
+                      <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />
                     </a>
                   </span>
                   <span className="tab">
                     <a href="https://github.com/NolanBerg/SiegeSpawnPeeks.NET" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faGithub} className="github-icon" />
+                    </a>
+                  </span>
+                  <span className="tab">
+                    <a href="mailto:nolanreactdev@gmail.com" target="_blank" rel="noreferrer">
+                      <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
                     </a>
                   </span>
                 </div>
