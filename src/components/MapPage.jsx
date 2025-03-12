@@ -32,6 +32,7 @@ const mapContent = {
     { id: "D3prdVUTGRI", title: "Bedroom Window" }
   ],
   "clubhouse": [
+    { id: "ZHQ-oLY4k28", title: "CCTV Soft Wall" },
     { id: "yXdrASlSu0I", title: "Gym Window" },
     { id: "9KXLdlpKvOE", title: "Construction Runout" },
     { id: "PDRZWsQMXeg", title: "Junkyard Door" }
