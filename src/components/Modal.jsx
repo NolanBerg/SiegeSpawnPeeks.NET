@@ -4,7 +4,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRef = useRef(null);
-
+  // Handle mouse outside modal
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {

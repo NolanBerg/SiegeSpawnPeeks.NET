@@ -41,13 +41,13 @@ const MapDropdown = () => {
     setFilteredMaps(filtered);
   };
 
-  // Handle map selection (from dropdown or Enter key)
+  // Handle map selection enter or quit
   const handleMapSelection = (map) => {
     const formattedMap = map.toLowerCase().replace(/\s+/g, "-"); // Format the map name
     navigate(`/map/${formattedMap}`); // Navigate to the map page
     setSearchQuery(""); // Clear the search bar
     setFilteredMaps([]); // Clear the dropdown
-    setIsDropdownVisible(false); // Hide the dropdown
+    setIsDropdownVisible(false); // Hide dropdown
   };
 
   // Handle Enter key press
@@ -68,11 +68,11 @@ const MapDropdown = () => {
     setFilteredMaps(maps); // Show all maps initially
   };
 
-  // Handle search bar blur (optional: hide dropdown when focus is lost)
+  // Handle search bar blur when out of focus change 200 if needed
   const handleSearchBlur = () => {
     setTimeout(() => {
-      setIsDropdownVisible(false); // Hide dropdown after a short delay
-    }, 200); // Adjust delay as needed
+      setIsDropdownVisible(false); 
+    }, 200); 
   };
 
   return (
@@ -87,7 +87,7 @@ const MapDropdown = () => {
           onChange={handleSearchChange}
           onKeyDown={handleKeyDown}
           onFocus={handleSearchFocus} // Show dropdown on focus
-          onBlur={handleSearchBlur} // Hide dropdown on blur (optional)
+          onBlur={handleSearchBlur} // Hide dropdown on blur 
           className="search-bar"
         />
       </div>

@@ -201,7 +201,7 @@ h1 {
 }
 .search-bar {
   width: 100%;
-  padding: 10px 40px 10px 20px; /* Adjust padding: more on the right for the icon */
+  padding: 10px 40px 10px 20px; /* Adjust padding more on right for the icon */
   border: 2px solid #61dafb;
   border-radius: 25px;
   outline: none;

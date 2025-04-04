@@ -9,7 +9,7 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      {/* Wrap all components in fragment */}
+      {/* Wrap components in fragment */}
       <>
         <App />
         <Analytics />
