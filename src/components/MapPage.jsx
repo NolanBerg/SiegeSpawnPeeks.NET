@@ -21,7 +21,8 @@ const mapContent = {
   ],
   "border": [
     { id: "Kfu5IIRLHOk", title: "Detention Wall" },
-    { id: "GRs5EwILLGU", title: "Detention Runout" }
+    { id: "GRs5EwILLGU", title: "Detention Runout" },
+    { id: "6wQJqBxZE-Q", title: "Supply Room Window" }
   ],
   "chalet": [
     { id: "vx63egdPMv8", title: "Hallway Window" },
@@ -51,13 +52,15 @@ const mapContent = {
   "consulate": [
     { id: "Ps4YFBQIg50", title: "Hallway Window" },
     { id: "nchmYK1QYzk", title: "Visa Window" },
-    { id: "GYKQQCCYM7A", title: "Yellow Stairs Door" }
+    { id: "GYKQQCCYM7A", title: "Yellow Stairs Door" },
+    { id: "h-L1yRBqvWI", title: "Meeting Room Window" }
   ],
   "emerald-plains": [
     { id: "ixusGfk63XY", title: "Archive Runout" },
     { id: "AfF7PpmC9OI", title: "Memorial Window" },
     { id: "-Q0gedd5Ucs", title: "Stables Runout" },
-    { id: "yz8I7LpR8Rs", title: "Back Entrance Door" }
+    { id: "yz8I7LpR8Rs", title: "Back Entrance Door" },
+    { id: "vA9vkRxldx8", title: "Mud Room Window" }
   ],
   "kafe-dostoyevsky": [ 
     { id: "0o-78ZUQb9M", title: "Park Door" },
