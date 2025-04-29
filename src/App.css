@@ -10,8 +10,8 @@
   position: relative; /* Needed for absolute positioning of banner3 */
 }
 .banner {
-  background-color: hsl(0, 0%, 10%); /* Dark gray */
-  color: #282c34; /* Dark text */
+  background-color: hsl(0, 12%, 8%); /* Dark gray */
+  color: #c5cddc; /* Dark text */
   padding: 10px 20px; /* Adjust padding */
   width: 100%; /* Full width */
   display: flex;
@@ -80,7 +80,7 @@
   transition: transform 0.3s ease; /* Smooth transition */
 }
 .second-logo {
-  width: 140px; /* Adjust logo size */
+  width: 200px; /* Adjust logo size */
   height: 65px; /* Adjust logo size */
   margin: 0 auto; /* Center the logo horizontally */
   border: 2px solid #61dafb;; /* Add a border */
@@ -414,7 +414,7 @@ h1 {
   }
 
   .second-logo {
-    width: 140px; /* Smaller second logo */
+    width: 150px; /* Smaller second logo */
     height: 75px; /* Smaller second logo */
     margin-right: 15px;
   }
