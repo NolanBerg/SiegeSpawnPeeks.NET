@@ -40,7 +40,7 @@ function App() {
                   </span>
                   {/* Added YouTube Icon */}
                   <span className="tab">
-                    <a href="https://www.youtube.com/@Nolan_Berg" target="_blank" rel="noreferrer">
+                    <a href="https://www.youtube.com/@nolmanofficial" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />
                     </a>
                   </span>

@@ -138,7 +138,7 @@ const MapPage = () => {
             <FontAwesomeIcon icon={faHome} className="home-icon" />
           </span>
           <span className="tab">
-            <a href="https://www.youtube.com/@Nolan_Berg" target="_blank" rel="noreferrer">
+            <a href="https://www.youtube.com/@nolmanofficial" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />
             </a>
           </span>
