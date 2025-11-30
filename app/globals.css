@@ -1,0 +1,500 @@
+.App {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  background-color: #282c34; /* Dark background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  position: relative; /* Needed for absolute positioning of banner3 */
+}
+.banner {
+  background-color: hsl(0, 12%, 8%); /* Dark gray */
+  color: #c5cddc; /* Dark text */
+  padding: 10px 20px; /* Adjust padding */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between sections */
+  position: fixed; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+.left-section {
+  display: flex;
+  align-items: center; /* Center logos vertically */
+  justify-content: flex-start; /* Align to the left */
+  flex: 1; /* Take up remaining space */
+}
+.middle-section {
+  display: flex;
+  align-items: center; /* Center logos vertically */
+  justify-content: center; /* Center logos horizontally */
+  flex: 1; /* Take up remaining space */
+}
+.right-section {
+  display: flex;
+  gap: 20px; /* Space between tabs */
+  justify-content: flex-end; /* Align to the right */
+  flex: 1; /* Take up remaining space */
+}
+.banner2 {
+  background-color: #61dafb;; /* White line */
+  width: 100%; /* Full width */
+  height: 2px; /* Thin line */
+  display: flex;
+  position: fixed; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+}
+.banner3 {
+  background-color: white; /* Fallback color */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: absolute; /* Position absolutely */
+  top: 1px; /* Start below banner2 (1px height) */
+  bottom: 0; /* Extend to the bottom of the page */
+  z-index: 0; /* Ensure it stays below other content */
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/background.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed */
+  overflow-y: hidden; /* Disables vertical scrolling */
+}
+.banner .logo {
+  width: 45px; /* Adjust logo size */
+  height: 55px; /* Adjust logo size */
+  margin-left: 10px; /* Add margin to the left of the logo */
+  border: 2px solid white; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+.banner .logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+.second-logo {
+  width: 200px; /* Adjust logo size */
+  height: 65px; /* Adjust logo size */
+  margin: 0 auto; /* Center the logo horizontally */
+  border: 2px solid #61dafb;; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+h1 {
+  margin-top: 40px; /* Add space between banner and title */
+  font-size: 4.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white; /* Text color */
+  text-shadow: 
+    -0.5px -0.5px 0 #000,  
+     0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+     0.5px  0.5px 0 #000; /* Black outline */
+}
+.tab svg {
+  margin-right: 11px; /* Add space between the icon and text */
+  vertical-align: middle; /* Align the icon vertically with the text */
+}
+.envelope-icon,
+.github-icon, 
+.user-icon, 
+.home-icon,
+.youtube-icon{
+  font-size: 34px; /* Adjust the size as needed */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  color: #61dafb;
+}
+.tab:hover .envelope-icon,
+.tab:hover .github-icon,
+.tab:hover .user-icon, 
+.tab:hover .home-icon,
+.tab:hover .youtube-icon {
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of everything */
+}
+.modal {
+  background: linear-gradient(145deg, #1e1e1e, #282c34); /* Gradient background */
+  padding: 30px;
+  border: 2px solid #61dafb; /* Bright blue border */
+  border-radius: 15px; /* Rounded corners */
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  color: white; /* Text color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a lifted effect */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.modal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white; /* Bright blue for the header */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+.modal p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd; /* Light gray for better readability */
+}
+.modal ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin-bottom: 20px;
+}
+.modal ul li {
+  font-size: 1rem;
+  padding: 10px;
+  background-color: rgba(97, 218, 251, 0.1); /* Light blue background for list items */
+  margin-bottom: 10px;
+  border-radius: 5px; /* Rounded corners for list items */
+  border-left: 3px solid #61dafb; /* Accent border on the left */
+  text-align: left;
+}
+.modal button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #61dafb;
+  border-radius: 7px;
+  border: 1px solid black;
+  color: #282c34;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+.modal button:hover {
+  background-color: #4fa8d3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+.modal button:active {
+  transform: translateY(0); /* Reset lift when clicked */
+}
+.search-bar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -13em;
+}
+.search-bar-wrapper {
+  position: relative;
+  width: 28em;
+}
+.search-bar {
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* Adjust padding more on right for the icon */
+  border: 2px solid #61dafb;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
+}
+.search-bar::placeholder {
+  color: #aaa;
+}
+.search-bar:focus {
+  border-color: #4fa8d3;
+}
+.search-icon {
+  position: absolute;
+  right: 10px; /* Position on the right */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #61dafb;
+  font-size: 1.2rem;
+  pointer-events: none; /* Prevent icon from blocking clicks */
+}
+.dropdown {
+  position: absolute;
+  top: 50px; /* Position below the search bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 27em;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #282c34;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  z-index: 1000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dropdown-item {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dropdown-item:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+.map-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #282c34;
+  color: white;
+}
+.bannermp {
+  position: fixed;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: hsl(0, 0%, 10%);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.bannermp .logo {
+  width: 45px; /* Adjust logo size */
+  height: 55px; /* Adjust logo size */
+  margin-left: 10px; /* Add margin to the left of the logo */
+  border: 2px solid white; /* Add a border */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+.bannermp .logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+.banner2mp {
+  position: fixed;
+  height: 2px;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #61dafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+}
+.map-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  margin-top: 6.5em;
+}
+.back-button {
+  position: fixed; /* Changed from absolute to fixed */
+  left: 20px;
+  top: 100px; /* Adjust based on your banner height */
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+.back-button:hover {
+  opacity: 0.8;
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+.arrow-icon{
+  font-size: 38px; /* Adjust the size as needed */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  color: #61dafb;
+  margin-right: 8px;
+}
+.back-text {
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.map-title {
+  text-align: center;
+  color: white;
+  margin: 20px 0; /* Fixed margin */
+  font-size: 2.5rem;
+  line-height: 1.2; /* Ensure consistent line height */
+  min-height: 60px; /* Fixed height to prevent layout shift */
+}
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: auto;
+  gap: 40px;
+  margin: 30px auto 0; /* Center the container */
+  max-width: 800px; /* Constrain width */
+}
+.video-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1.5px solid #61dafb;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width of the container */
+  max-width: 800px; /* Match videos-container max-width */
+  margin: 0 auto; /* Center the card */
+}
+.video-card:hover {
+  transform: translateY(-5px);
+}
+.video-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Adjust banner layout */
+  .banner, 
+  .banner.mp {
+  padding: 10px; /* Reduce padding */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between sections */
+  position: fixed; /* Make the banner sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+
+  /* Reduce logo sizes */
+  .banner .logo,
+  .bannermp .logo {
+    width: 35px; /* Smaller logo */
+    height: 45px; /* Smaller logo */
+  }
+
+  .second-logo {
+    width: 150px; /* Smaller second logo */
+    height: 65px; /* Smaller second logo */
+    margin-right: 15px;
+  }
+
+  /* Reduce icon sizes */
+  .envelope-icon,
+  .github-icon,
+  .user-icon,
+  .home-icon,
+  .youtube-icon {
+    font-size: 28px; /* Smaller icons */
+  }
+
+  /* Adjust spacing in the right section */
+  .right-section {
+    gap: 2px;
+  }
+
+  /* Make the search bar bigger */
+  .banner3 {
+    padding: 0 10px; /* Add horizontal padding */
+  }
+
+  .search-bar-wrapper {
+    width: 100%; /* Full width on mobile */
+    min-width: 90vw;
+  }
+
+  .search-bar {
+    font-size: 1rem; /* Slightly larger font size */
+    padding: 12px 42px 12px 18px; /* Increase padding for better touch interaction */
+    width: 100%; /* Full width */
+    min-width: 90vw;
+    margin-top: -20px;
+  }
+
+  .search-icon {
+    font-size: 1.3rem; /* Slightly larger search icon */
+    right: 15px;
+    margin-bottom: 10px;
+    margin-top: -8px; /* Adjust position for better alignment */
+  }
+
+  /* Adjust dropdown width to match the search bar */
+  .dropdown {
+    width: 100%; /* Full width to match the search bar */
+    max-width: 500px; /* Match the search bar's max-width */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Fix map title position on mobile */
+  .map-title {
+    margin-top: 70px; /* Increased space above the title */
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  /* Adjust map content spacing */
+  .map-content {
+    margin-top: 140px; /* Add more space above the content */
+  }
+  /* Make videos bigger on mobile */
+  .videos-container {
+    width: 90vw; /* Increase width to take up more screen space */
+    max-width: 100%; /* Allow it to stretch to full width */
+    gap: 20px; /* Reduce gap between videos */
+  }
+
+  .video-card {
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Allow it to stretch to full width */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .video-wrapper {
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  }
+
+  .video-wrapper iframe {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+}
