@@ -157,9 +157,6 @@ export default function MapPage() {
                 </div>
 
                 <div className="right-section">
-                    <span className="tab" onClick={() => router.push('/')}>
-                        <FontAwesomeIcon icon={faHome} className="home-icon" />
-                    </span>
                     <span className="tab">
                         <LoginButton />
                     </span>
