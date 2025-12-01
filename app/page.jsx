@@ -29,7 +29,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="right-section">
-                    <LoginButton />
+                    <span className="tab">
+                        <LoginButton />
+                    </span>
                     <span className="tab">
                         <a href="https://www.youtube.com/@nolmanofficial" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />

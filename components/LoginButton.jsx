@@ -3,13 +3,42 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faRightFromBracket, faUpload, faUserShield } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginButton() {
     const { data: session, status } = useSession();
     const [showMenu, setShowMenu] = useState(false);
+    const [imageError, setImageError] = useState(false);
     const router = useRouter();
+    const menuRef = useRef(null);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShowMenu(false);
+            }
+        }
+
+        // Add event listener when menu is open
+        if (showMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        // Cleanup
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showMenu]);
+
+    // Reset image error when session changes
+    useEffect(() => {
+        if (session?.user?.image) {
+            console.log('Session user image:', session.user.image);
+            setImageError(false);
+        }
+    }, [session]);
 
     if (status === 'loading') {
         return (
@@ -28,31 +57,39 @@ export default function LoginButton() {
     }
 
     return (
-        <div style={{ position: 'relative' }}>
+        <div ref={menuRef} style={{ position: 'relative', display: 'inline-block' }}>
             <span
-                className="tab"
                 onClick={() => setShowMenu(!showMenu)}
-                style={{ cursor: 'pointer' }}
+                style={{
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}
             >
-                {session.user.image ? (
+                {session.user.image && !imageError ? (
                     <img
                         src={session.user.image}
                         alt="Profile"
-                        onError={(e) => {
+                        onError={() => {
                             console.error('Failed to load profile image:', session.user.image);
-                            e.target.style.display = 'none';
-                            e.target.parentElement.innerHTML = '<i class="fa fa-user"></i>';
+                            setImageError(true);
                         }}
                         onLoad={() => console.log('Profile image loaded successfully')}
                         style={{
-                            width: '32px',
-                            height: '32px',
+                            width: '34px',
+                            height: '34px',
                             borderRadius: '50%',
-                            border: '2px solid #fff'
+                            border: '2px solid #fff',
+                            display: 'block',
+                            color: '#61dafb'
                         }}
                     />
                 ) : (
-                    <FontAwesomeIcon icon={faUser} className="user-icon" />
+                    <FontAwesomeIcon
+                        icon={faUser}
+                        className="user-icon"
+                    />
                 )}
             </span>
 

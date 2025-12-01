@@ -160,7 +160,9 @@ export default function MapPage() {
                     <span className="tab" onClick={() => router.push('/')}>
                         <FontAwesomeIcon icon={faHome} className="home-icon" />
                     </span>
-                    <LoginButton />
+                    <span className="tab">
+                        <LoginButton />
+                    </span>
                     <span className="tab">
                         <a href="https://www.youtube.com/@nolmanofficial" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />

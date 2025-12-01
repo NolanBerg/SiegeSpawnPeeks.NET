@@ -70,7 +70,7 @@ SiegeSpawnPeeks.NET/
 ├── .env.example                   # Environment variables template
 ├── next.config.mjs                # Next.js configuration
 ├── package.json                   # Dependencies
-└── vercel.json                    # Vercel deployment config
+└── vercel.json                 # Vercel deployment config
 ```
 
 ---
