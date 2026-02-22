@@ -3,6 +3,7 @@ import './index.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import AuthProvider from '@/components/AuthProvider';
+import { NavigationProvider } from '@/components/NavigationContext';
 
 export const metadata = {
     title: 'Siege Spawn Peeks',
@@ -15,9 +16,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body>
                 <AuthProvider>
-                    {children}
-                    <Analytics />
-                    <SpeedInsights />
+                    <NavigationProvider>
+                        {children}
+                        <Analytics />
+                        <SpeedInsights />
+                    </NavigationProvider>
                 </AuthProvider>
             </body>
         </html>

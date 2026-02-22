@@ -50,7 +50,7 @@
   z-index: 10; /* Ensure it stays above other content */
 }
 .banner3 {
-  background-color: white; /* Fallback color */
+  background-color: #282c34; /* Fallback color */
   width: 100%; /* Full width */
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -390,6 +390,10 @@ h1 {
   border: none;
 }
 
+@keyframes nav-spin {
+    to { transform: rotate(360deg); }
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Adjust banner layout */
@@ -433,8 +437,9 @@ h1 {
     gap: 2px;
   }
 
-  /* Make the search bar bigger */
+  /* Fix background-attachment on mobile (iOS Safari ignores cover with fixed) */
   .banner3 {
+    background-attachment: scroll;
     padding: 0 10px; /* Add horizontal padding */
   }
 

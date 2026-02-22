@@ -4,13 +4,13 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faRightFromBracket, faUpload, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useNavigate } from '@/components/NavigationContext';
 
 export default function LoginButton() {
     const { data: session, status } = useSession();
     const [showMenu, setShowMenu] = useState(false);
     const [imageError, setImageError] = useState(false);
-    const router = useRouter();
+    const { navigate } = useNavigate();
     const menuRef = useRef(null);
 
     // Close dropdown when clicking outside
@@ -120,7 +120,7 @@ export default function LoginButton() {
                     <button
                         onClick={() => {
                             setShowMenu(false);
-                            router.push('/upload');
+                            navigate('/upload');
                         }}
                         style={{
                             width: '100%',
@@ -143,7 +143,7 @@ export default function LoginButton() {
                     <button
                         onClick={() => {
                             setShowMenu(false);
-                            router.push('/admin');
+                            navigate('/admin');
                         }}
                         style={{
                             width: '100%',

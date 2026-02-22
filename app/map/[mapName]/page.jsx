@@ -1,6 +1,7 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { useNavigate } from '@/components/NavigationContext';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faEnvelope, faLeftLong } from '@fortawesome/free-solid-svg-icons';
@@ -117,7 +118,7 @@ const mapContent = {
 
 export default function MapPage() {
     const params = useParams();
-    const router = useRouter();
+    const { navigate } = useNavigate();
     const mapName = params.mapName;
     const decodedName = decodeURIComponent(mapName);
     const [userVideos, setUserVideos] = useState([]);
@@ -181,7 +182,7 @@ export default function MapPage() {
             <div className="banner2mp"></div>
 
             <div className="map-content">
-                <button className="back-button" onClick={() => router.push('/')}>
+                <button className="back-button" onClick={() => navigate('/')}>
                     <FontAwesomeIcon icon={faLeftLong} className="arrow-icon" />
                     <span className="back-text">Go Back</span>
                 </button>

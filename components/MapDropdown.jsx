@@ -1,15 +1,15 @@
 'use client';
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "@/components/NavigationContext";
 
 const MapDropdown = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredMaps, setFilteredMaps] = useState([]);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const router = useRouter();
+  const { navigate } = useNavigate();
 
   // List of all maps
   const maps = [
@@ -45,7 +45,7 @@ const MapDropdown = () => {
 
   const handleMapSelection = (map) => {
     const formattedMap = map.toLowerCase().replace(/\s+/g, "-");
-    router.push(`/map/${formattedMap}`);
+    navigate(`/map/${formattedMap}`);
     setSearchQuery("");
     setFilteredMaps([]);
     setIsDropdownVisible(false);
