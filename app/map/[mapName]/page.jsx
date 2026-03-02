@@ -190,7 +190,6 @@ export default function MapPage() {
                 <h1 className="map-title">{capitalizeMapName(decodedName)}</h1>
 
                 {/* Original YouTube Videos */}
-                <h2 style={{ color: '#fff', marginTop: '30px', marginBottom: '20px' }}>Official Peeks</h2>
                 <div className="videos-container">
                     {videos.map((video, index) => (
                         <div key={index} className="video-card">
@@ -212,7 +211,6 @@ export default function MapPage() {
                 {/* User-Submitted Videos */}
                 {!loading && userVideos.length > 0 && (
                     <>
-                        <h2 style={{ color: '#fff', marginTop: '50px', marginBottom: '20px' }}>Community Submissions</h2>
                         <div className="videos-container">
                             {userVideos.map((video) => (
                                 <div key={video.id} className="video-card">
