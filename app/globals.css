@@ -397,8 +397,8 @@ h1 {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Adjust banner layout */
-  .banner, 
-  .banner.mp {
+  .banner,
+  .bannermp {
   padding: 10px; /* Reduce padding */
   width: 100%; /* Full width */
   display: flex;
@@ -418,9 +418,9 @@ h1 {
   }
 
   .second-logo {
-    width: 150px; /* Smaller second logo */
-    height: 65px; /* Smaller second logo */
-    margin-right: 15px;
+    width: 110px;
+    height: 45px;
+    margin-right: 10px;
   }
 
   /* Reduce icon sizes */
@@ -434,7 +434,7 @@ h1 {
 
   /* Adjust spacing in the right section */
   .right-section {
-    gap: 2px;
+    gap: 10px;
   }
 
   /* Fix background-attachment on mobile (iOS Safari ignores cover with fixed) */

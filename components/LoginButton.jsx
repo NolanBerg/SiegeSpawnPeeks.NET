@@ -64,7 +64,9 @@ export default function LoginButton() {
                     cursor: 'pointer',
                     display: 'inline-flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    width: '34px',
+                    height: '34px',
                 }}
             >
                 {session.user.image && !imageError ? (
@@ -82,7 +84,8 @@ export default function LoginButton() {
                             borderRadius: '50%',
                             border: '2px solid #fff',
                             display: 'block',
-                            color: '#61dafb'
+                            color: '#61dafb',
+                            boxSizing: 'border-box',
                         }}
                     />
                 ) : (
