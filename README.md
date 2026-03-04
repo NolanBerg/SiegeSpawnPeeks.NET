@@ -13,8 +13,7 @@ Live at https://www.siegespawnpeeks.net
 - Database: Neon Postgres (Serverless)
 - Storage: Vercel Blob
 - Deployment: Vercel
-- Styling: Vanilla CSS
-- Icons: Font Awesome
+- Frontend: React
 
 ---
 
